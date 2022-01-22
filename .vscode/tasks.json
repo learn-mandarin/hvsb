@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "npm: dev",
+      "detail": "svelte-kit dev --open --host"
+    },
+    {
+      "type": "npm",
+      "script": "deploy:specific",
+      "path": "functions/",
+      "problemMatcher": [],
+      "label": "deploy:specific - functions"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "recommendations": [
+    // Svelte
+    "svelte.svelte-vscode",
+    "fivethree.vscode-svelte-snippets",
+    // Styles
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss",
+    // Git
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "cschleiden.vscode-github-actions",
+    // Code quality
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    // Jest - Single Test Runner, used for E2E
+    "firsttris.vscode-jest-runner",
+    // Efficiency
+    "usernamehw.errorlens"
+    // "wallabyjs.quokka-vscode",
+    // "wallabyjs.wallaby-vscode"
+    // i18n
+    // "lokalise.i18n-ally"
+    // Personal Recommendations
+    // "aaron-bond.better-comments",
+    // "vscode-icons-team.vscode-icons",
+    // Useful in some cases
+    // "jsayol.firebase-explorer", or "toba.vsfire",
+    // "chflick.firecode" // (Firestore rules)
+    // "janne252.fontawesome-autocomplete", // clashes w/ Tailwindcss extension and doesn't work
+  ]
+}

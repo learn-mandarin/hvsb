@@ -1,0 +1,62 @@
+<script context="module" lang="ts">
+  export function load({ error, status }) {
+    return {
+      props: { error, status },
+    };
+  }
+</script>
+
+<script lang="ts">
+  import Button from '$lib/components/ui/Button.svelte';
+  import { onMount } from 'svelte';
+  let modal: 'contact' = null;
+
+  import { dev } from '$app/env';
+  export let status;
+  export let error;
+
+  onMount(async () => {
+    const Sentry = await import('@sentry/browser');
+    const eventId = Sentry.captureException(error);
+    console.log('sent error', eventId);
+    // https://docs.sentry.io/enriching-error-data/user-feedback
+    // Sentry.showReportDialog({ eventId });
+  });
+</script>
+
+<svelte:head>
+  <title>Error: {status}</title>
+</svelte:head>
+
+<div class="p-4 bg-white relative z-20">
+  <h2 class="text-xl sm:text-4xl font-bold mb-3">We're sorry, but we've run into an error.</h2>
+
+  <p class="mb-3">
+    The error has been recorded and we will be looking into it.
+    <b> If you have a moment, would you mind sending us a short note to explain what happened? </b>
+    For example, "I clicked on ______ and then ________."
+  </p>
+
+  <Button form="primary" onclick={() => (modal = 'contact')}>Contact Us</Button>
+
+  <p class="text-gray-600 text-sm mt-6">
+    This is the
+    {status}
+    error:
+    {error.message}
+  </p>
+
+  {#if dev && error.stack}
+    <pre>{error.stack}</pre>
+  {/if}
+
+  {#if modal === 'contact'}
+    {#await import('$lib/components/modals/Contact.svelte') then { default: Contact }}
+      <Contact
+        on:close={() => {
+          modal = null;
+        }}
+      />
+    {/await}
+  {/if}
+</div>
