@@ -1,6 +1,5 @@
 - solve layout await not letting page wait (might need to file issue)
 - user images flashes on hydrate
-- nightly backup repo migration
 - verse study packages & hvsb/scripture folder
 - PWA icon refresh
 - add functions to prettier and linting
