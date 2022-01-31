@@ -29,4 +29,16 @@
   </Knobs>
 </Variant>
 
+<Variant name="Knobbed2" description="Trying knobs">
+  <Knobs
+    input={{
+      firstProp: { type: 'text', default: 'hello world' },
+      secondProp: { type: 'number', default: 123 },
+    }}
+    let:output={{ firstProp, secondProp }}
+  >
+    <Button on:click={eventCallback}>{firstProp}, {secondProp}</Button>
+  </Knobs>
+</Variant>
+
 <EventsAddon />

@@ -14,8 +14,8 @@
   {#each knobs.fields as { type, name, label, ...props } (name)}
     <label for="">
       <span>{label || name}</span>
-      {#if type === 'string'}
-        <input type="string" bind:value={$knobs[name]} {...props} />
+      {#if type === 'text' || type === 'string'}
+        <input bind:value={$knobs[name]} {...props} />
       {:else if type === 'range'}
         <input type="range" bind:value={$knobs[name]} {...props} />
       {:else if type === 'number'}
