@@ -21,22 +21,12 @@
 </Variant>
 
 <Variant name="Knobbed" description="Trying knobs">
-  <Knobs knobs={{ prop1: false }} let:knobs>
-    {JSON.stringify(knobs)}
+  <Knobs input={{ myBool: false, myNum: 10, myStr: 'hello', myRanges: '-10-10;5' }} let:output>
+    <pre>
+      {JSON.stringify(output, null, 1)}
+    </pre>
     <Button on:click={eventCallback}>{title}</Button>
   </Knobs>
 </Variant>
-
-<!-- <Variant
-  name="Disabled"
-  description="The disabled button."
-  on:enter={() => {
-    disabled = true;
-  }}
-  on:exit={() => {
-    disabled = false;
-  }}>
-  <Button {disabled}>{title}</Button>
-</Variant> -->
 
 <EventsAddon />
