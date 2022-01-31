@@ -1,4 +1,4 @@
-// Source: svench/src/knobs.js, but removed $previous store resumability to reduce complexity
+// Source: https://github.com/rixo/svench/blob/main/packages/svench/src/knobs.js, but removed $previous store resumability to reduce complexity
 
 import { writable } from 'svelte/store';
 import type { Writable } from 'svelte/store';
@@ -9,8 +9,9 @@ const parseValueType = (value) => {
     const match = /^(-?[\d.]+)-(-?[\d.]+)(?:;([\d.]+))?$/.exec(value);
     if (match) {
       const [, min, max, x] = match;
-      value = x != null ? x : (parseInt(max) - parseInt(min)) / 2;
+      value = x != null ? parseInt(x) : (parseInt(max) - parseInt(min)) / 2;
       // @ts-ignore
+      type = 'range';
       return { default: value, type, min, max };
     }
   } else if (type === 'object') {
@@ -33,17 +34,21 @@ const parseConfig = (cfg) => {
 };
 
 interface Knobs<T> extends Writable<T> {
-  fields?: any;
+  fields?: {
+    name: string;
+    type: string;
+    label?: string;
+    [k: string]: any;
+  }[];
 }
 
-export default (cfg) => {
+export default <T>(cfg) => {
   if (!cfg) return null;
 
   cfg = parseConfig(cfg);
 
-  const knobs: Knobs<{
-    [k: string]: any;
-  }> = writable(
+  const knobs: Knobs<T> = writable<T>(
+    // @ts-ignore
     Object.fromEntries(
       cfg.map(({ name, default: defaultValue = undefined }) => [name, defaultValue])
     )

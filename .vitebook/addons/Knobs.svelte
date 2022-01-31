@@ -1,38 +1,27 @@
 <script lang="ts">
   import { Addon } from '@vitebook/client/addons';
-  import { writable } from 'svelte/store';
-  import KnobStrings from './KnobStrings.svelte';
+  import parseInput from './knobs';
   export let icon = undefined;
 
   type T = $$Generic;
   export let input: T;
-  $: knobs = writable<Partial<T>>({});
+  $: knobs = parseInput<T>(input);
 </script>
 
 <slot output={$knobs} />
 
 <Addon title="Knobs" {icon}>
-  <pre>{JSON.stringify(input, null, 1)}</pre>
-  {#each Object.keys(input) as key (key)}
-    {@const type = typeof input[key]}
+  {#each knobs.fields as { type, name, label, ...props } (name)}
     <label for="">
-      <span>{key}</span>
-      {type}
+      <span>{label || name}</span>
       {#if type === 'string'}
-        <KnobStrings
-          on:update={(e) => {
-            if (parseInt(e.detail)) {
-              $knobs[key] = parseInt(e.detail);
-            } else {
-              $knobs[key] = e.detail;
-            }
-          }}
-          start={input[key]}
-        />
+        <input type="string" bind:value={$knobs[name]} {...props} />
+      {:else if type === 'range'}
+        <input type="range" bind:value={$knobs[name]} {...props} />
       {:else if type === 'number'}
-        <input type="number" bind:value={$knobs[key]} />
+        <input type="number" bind:value={$knobs[name]} {...props} />
       {:else if type === 'boolean'}
-        <input type="checkbox" bind:checked={$knobs[key]} />
+        <input type="checkbox" bind:checked={$knobs[name]} {...props} />
       {/if}
     </label>
   {/each}
