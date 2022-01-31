@@ -49,6 +49,7 @@ See https://jestjs.io/docs/en/getting-started for tips
 
 
 ## Connect emulator to frontend app
+
 ```
 firebase.initializeApp(yourFirebaseConfig);
   
