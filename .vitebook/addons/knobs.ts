@@ -1,6 +1,7 @@
 // Source: svench/src/knobs.js, but removed $previous store resumability to reduce complexity
 
 import { writable } from 'svelte/store';
+import type { Writable } from 'svelte/store';
 
 const parseValueType = (value) => {
   let type = typeof value;
@@ -31,20 +32,23 @@ const parseConfig = (cfg) => {
   }
 };
 
+interface Knobs<T> extends Writable<T> {
+  fields?: any;
+}
+
 export default (cfg) => {
   if (!cfg) return null;
 
   cfg = parseConfig(cfg);
 
-  const knobs = writable(
+  const knobs: Knobs<{
+    [k: string]: any;
+  }> = writable(
     Object.fromEntries(
       cfg.map(({ name, default: defaultValue = undefined }) => [name, defaultValue])
     )
   );
 
-  // knobs.set
-
-  // @ts-ignore
   knobs.fields = cfg.map(({ name, type = 'text', ...props }) => ({
     name,
     type,

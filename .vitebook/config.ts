@@ -23,13 +23,13 @@ export default defineConfig<DefaultThemeConfig>({
     description: 'The fastest way to build Svelte apps.',
     theme: {
       sidebar: {
-        style: 'docs',
-        categories: true,
+        style: 'explorer',
+        // categories: true,
       },
       markdown: {
         toc: true,
         editLink: true,
-        editLinkText: 'Edit this page on GitHub',
+        editLinkText: 'Edit on GitHub',
         prevLink: true,
         nextLink: true,
         lastUpdated: true,
