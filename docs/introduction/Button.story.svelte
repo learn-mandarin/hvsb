@@ -8,10 +8,10 @@
 </script>
 
 <script>
-  import Knobs from '../../.vitebook/addons/Knobs.svelte';
   import { Variant } from '@vitebook/client';
   import { EventsAddon, eventCallback } from '@vitebook/client/addons';
   import Button from './Button.svelte';
+  import { Knobs } from 'vitebook-addons';
 
   let title = 'Click Me';
 </script>
