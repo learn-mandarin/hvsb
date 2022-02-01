@@ -2,16 +2,25 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { clientPlugin, defineConfig } from '@vitebook/client/node';
 import { svelteMarkdownPlugin } from '@vitebook/markdown-svelte/node';
 import { defaultThemePlugin, DefaultThemeConfig } from '@vitebook/theme-default/node';
+import { shikiMarkdownPlugin } from '@vitebook/markdown-shiki/node';
 import preprocess from 'svelte-preprocess';
 
 export default defineConfig<DefaultThemeConfig>({
-  include: ['docs/**/*.md', 'docs/**/*.story.svelte'],
-  // include: ['src/**/*.md', 'src/**/*.story.svelte'],
+  include: ['docs/**/*.md', 'src/**/*.story.svelte'],
+  // include: ['docs/**/*.md', 'src/**/*.md', 'src/**/*.story.svelte'],
   alias: {
     $lib: '/src/lib',
   },
   plugins: [
-    svelteMarkdownPlugin(),
+    svelteMarkdownPlugin({
+      code: {
+        lineNumbers: false,
+      },
+    }),
+    shikiMarkdownPlugin({
+      langs: ['html', 'css', 'js', 'ts', 'svelte'],
+      theme: 'dark-plus',
+    }),
     clientPlugin({ appFile: 'App.svelte' }),
     defaultThemePlugin(),
     svelte({
@@ -26,8 +35,8 @@ export default defineConfig<DefaultThemeConfig>({
     description: 'The fastest way to build Svelte apps.',
     theme: {
       sidebar: {
-        style: 'explorer',
-        // categories: true,
+        style: 'docs',
+        categories: true,
       },
       markdown: {
         toc: true,
