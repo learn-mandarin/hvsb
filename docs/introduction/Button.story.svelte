@@ -21,11 +21,11 @@
 </Variant>
 
 <Variant name="Knobbed" description="Trying knobs">
-  <Knobs input={{ myBool: false, myNum: 10, myStr: 'hello', myRanges: '-10-10;5' }} let:output>
-    <pre>
-      {JSON.stringify(output, null, 1)}
-    </pre>
-    <Button on:click={eventCallback}>{title}</Button>
+  <Knobs
+    input={{ myBool: false, myNum: 10, myStr: 'hello', myRange: '-10-10;5' }}
+    let:output={{ myBool, myNum, myStr, myRange }}
+  >
+    <Button on:click={eventCallback}>{myStr}</Button>
   </Knobs>
 </Variant>
 
