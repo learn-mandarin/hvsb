@@ -21,7 +21,7 @@
     "deploy-firestore-rules:prod": "firebase deploy --only firestore:rules -P production",
     "test-firestore-rules": "jest test/firestore/users --detectOpenHandles",
     "test-firestore-rules:watch": "jest test/firestore/users --watch",
-    "vitebook:dev": "vitebook dev",
+    "vitebook": "vitebook dev",
     "vitebook:build": "vitebook build",
     "vitebook:preview": "vitebook preview"
   },
