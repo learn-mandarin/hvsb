@@ -3,7 +3,7 @@
   import { unduplicate } from '$lib/helpers/unduplicate';
   export let medium: IDocument | IImage | IVideo;
   import { page } from '$app/stores';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import ShowHide from '../ui/ShowHide.svelte';
 </script>
 

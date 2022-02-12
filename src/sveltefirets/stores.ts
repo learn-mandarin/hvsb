@@ -11,7 +11,6 @@ export function docStore<T>(
 ) {
   const { startWith, log, traceId, maxWait, once } = opts;
 
-  console.log('1 reached');
   if (typeof window === 'undefined') {
     const store = writable<T>(startWith);
     const { subscribe } = store;
@@ -27,7 +26,6 @@ export function docStore<T>(
     };
   }
 
-  console.log('reached');
   const ref = typeof path === 'string' ? docRef<T>(path) : path;
   const trace = traceId && startTrace(traceId);
 

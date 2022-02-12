@@ -29,7 +29,7 @@
   import Header from '$lib/components/shell/Header.svelte';
   import View from '$lib/components/ui/View.svelte';
   import Friend from '$lib/components/home/Friend.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
 </script>
 
 <svelte:head>
@@ -86,7 +86,7 @@
       <!-- <Button
         href={`/${currentVersion}/${currentBook}/${currentChapter}`}
         color="white"
-        form="primary"
+        form="filled"
         class="home-cta"
         size="lg"
         >{currentBook === 'MAT' && currentChapter == '1'
@@ -493,11 +493,11 @@
             or <b>$50 per year</b> and start with a two-week trial period.
           </p>
           {#if !$user}
-            <Button onclick={() => (modal = 'auth')} color="white" form="primary" size="lg"
+            <Button onclick={() => (modal = 'auth')} color="white" form="filled" size="lg"
               >Sign Up</Button
             >
           {:else if !isSubscriber($user)}
-            <Button onclick={() => (modal = 'subscribe')} color="white" form="primary" size="lg"
+            <Button onclick={() => (modal = 'subscribe')} color="white" form="filled" size="lg"
               >Subscribe</Button
             >
           {/if}

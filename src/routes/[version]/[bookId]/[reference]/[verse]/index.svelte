@@ -7,7 +7,7 @@
 
 <script lang="ts">
   export let verse: string;
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { admin } from '$lib/stores';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';

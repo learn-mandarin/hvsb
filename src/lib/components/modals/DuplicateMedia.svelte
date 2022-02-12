@@ -2,7 +2,7 @@
   import type { IDocument, IImage, IVideo } from '$lib/interfaces';
   export let media: IDocument | IImage | IVideo;
   import Modal from '$lib/components/ui/Modal.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { bibleBooks } from '$lib/stores';
   import { getChapters, getNumberOfVerses } from '$lib/helpers/chapters';
 
@@ -80,7 +80,7 @@
       </select>
     </div>
 
-    <Button form="primary" onclick={duplicate}>Duplicate</Button>
+    <Button form="filled" onclick={duplicate}>Duplicate</Button>
     <Button form="simple" onclick={close}>Cancel</Button>
   </Modal>
 </form>

@@ -3,7 +3,7 @@
   import type { IImage, IImageParent, IDocumentSection } from '$lib/interfaces';
   export let image: Partial<Hit & IImage>;
   import Modal from '$lib/components/ui/Modal.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { chapterMedia } from '$lib/stores';
   import { page } from '$app/stores';
 
@@ -63,6 +63,6 @@
     {/each}
   </select>
 
-  <Button form="primary" onclick={assignParent}>Place</Button>
+  <Button form="filled" onclick={assignParent}>Place</Button>
   <Button form="simple" onclick={close}>Cancel</Button>
 </Modal>

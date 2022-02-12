@@ -1,7 +1,7 @@
 <script lang="ts">
   import Header from '$lib/components/shell/Header.svelte';
   import View from '$lib/components/ui/View.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { user, admin, subscriptionStatus, createBillingPortalSession } from '$lib/stores';
   let modal: 'contact' | 'subscribe' = null;
 
@@ -61,7 +61,7 @@
             </div>
             <Button
               onclick={() => createBillingPortalSession(document.location.href)}
-              form="primary"
+              form="filled"
             >
               Resubscribe in Billing Portal
               <i class="fas fa-chevron-right" />
@@ -107,7 +107,7 @@
             Subscription ended on
             {printDateWithWeekday($user.subscriptions.basic.current_period_end * 1000)}.
           </div>
-          <Button onclick={() => createBillingPortalSession(document.location.href)} form="primary">
+          <Button onclick={() => createBillingPortalSession(document.location.href)} form="filled">
             Resubscribe in Billing Portal
             <i class="fas fa-chevron-right" />
           </Button>
@@ -126,9 +126,9 @@
               {printDateWithWeekday($user.subscriptions.basic.manualSubscriptionEndDate.toDate())}.
             {/if}
           </div>
-          <Button form="primary" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
+          <Button form="filled" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
         {:else}
-          <Button form="primary" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
+          <Button form="filled" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
         {/if}
       </div>
       <div class="mb-6 pb-6 border-b border-gray-300">

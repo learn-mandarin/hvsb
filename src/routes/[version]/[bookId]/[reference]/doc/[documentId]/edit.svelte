@@ -13,7 +13,7 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import { admin, user } from '$lib/stores';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { moveInArray } from '$lib/helpers/array';
   import { getGenres, isAddingAttributeToDB, unlinkFromParentDocument } from '$lib/helpers/editing';
   import EditVerseIds from '$lib/components/content/EditVerseIds.svelte';
@@ -112,7 +112,7 @@
       class="flex justify-between items-center pb-1 sticky top-0 z-10 bg-white
     pt-2 -mt-2"
     >
-      <Button class="mr-auto" type="submit" color="green" form="primary">Save</Button>
+      <Button class="mr-auto" type="submit" color="green" form="filled">Save</Button>
 
       {#if $admin || (document && $user && document.createdBy === $user.uid)}
         <Button color="red" form="simple" onclick={() => deleteDocument(document)}>

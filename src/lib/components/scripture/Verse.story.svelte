@@ -10,13 +10,14 @@
 <script>
   import { Variant } from '@vitebook/client';
   import { EventsAddon, eventCallback } from '@vitebook/client/addons';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { Knobs } from 'vitebook-addons';
 
   let title = 'Click Me';
 </script>
 
 <Variant name="Default" description="The default button.">
-  <!-- <Button on:click={eventCallback}>{title}</Button> -->
+  <Button on:click={eventCallback}>{title}</Button>
 </Variant>
 
 <Variant name="Knobbed" description="Trying knobs">
@@ -24,7 +25,7 @@
     input={{ myBool: false, myNum: 10, myStr: 'hello', myRange: '-10-10;5' }}
     let:output={{ myBool, myNum, myStr, myRange }}
   >
-    <!-- <Button on:click={eventCallback}>{myStr}</Button> -->
+    <Button on:click={eventCallback}>{myStr}</Button>
   </Knobs>
 </Variant>
 
@@ -36,7 +37,7 @@
     }}
     let:output={{ firstProp, secondProp }}
   >
-    <!-- <Button on:click={eventCallback}>{firstProp}, {secondProp}</Button> -->
+    <Button on:click={eventCallback}>{firstProp}, {secondProp}</Button>
   </Knobs>
 </Variant>
 

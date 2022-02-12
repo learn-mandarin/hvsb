@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { onMount } from 'svelte';
   let modal: 'contact' = null;
 
@@ -37,7 +37,7 @@
     For example, "I clicked on ______ and then ________."
   </p>
 
-  <Button form="primary" onclick={() => (modal = 'contact')}>Contact Us</Button>
+  <Button form="filled" onclick={() => (modal = 'contact')}>Contact Us</Button>
 
   <p class="text-gray-600 text-sm mt-6">
     This is the

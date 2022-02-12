@@ -6,7 +6,7 @@
 
   import type { IUser } from '$lib/interfaces';
   let usersType: IUser[] = [];
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { exportUsersAsCSV } from '$lib/helpers/export';
   import ResponsiveTable from '$lib/components/ui/ResponsiveTable.svelte';
   import SortUsers from './_SortUsers.svelte';
@@ -17,7 +17,7 @@
     <Filter items={users} let:filteredItems={filteredUsers} placeholder="Search names and emails">
       <div slot="right">
         <Button
-          form="primary"
+          form="filled"
           color="black"
           onclick={() => exportUsersAsCSV(filteredUsers, 'hvsb-users')}
         >
