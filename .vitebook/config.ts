@@ -24,6 +24,9 @@ export default defineConfig<DefaultThemeConfig>({
     clientPlugin({ appFile: 'App.svelte' }),
     defaultThemePlugin(),
     svelte({
+      compilerOptions: {
+        hydratable: true,
+      },
       extensions: ['.svelte', '.md'],
       // Consult https://github.com/sveltejs/svelte-preprocess for more information
       // about preprocessors.
@@ -35,7 +38,7 @@ export default defineConfig<DefaultThemeConfig>({
     description: 'The fastest way to build Svelte apps.',
     theme: {
       sidebar: {
-        style: 'docs',
+        style: 'explorer',
         categories: true,
       },
       markdown: {
