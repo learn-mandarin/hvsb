@@ -38,7 +38,7 @@ export default defineConfig<DefaultThemeConfig>({
     description: 'The fastest way to build Svelte apps.',
     theme: {
       sidebar: {
-        style: 'explorer',
+        style: 'docs',
         categories: true,
       },
       markdown: {
