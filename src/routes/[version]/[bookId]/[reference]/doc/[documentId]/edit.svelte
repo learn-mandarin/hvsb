@@ -360,6 +360,9 @@
     >
       Add Paragraph
     </Button>
+    <div class="mt-5 prose max-w-none">
+      <ClassicCustomized bind:html={document.editorNotes} />
+    </div>
     {#if $admin > 1}
       <input
         type="text"
