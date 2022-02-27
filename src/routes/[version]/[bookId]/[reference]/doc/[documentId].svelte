@@ -127,19 +127,6 @@
     </a>
     &nbsp;
   </div>
-
-  <div class="flex" slot="admin">
-    <a
-      sveltekit:prefetch
-      class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
-      border border-primary-700"
-      href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-        .reference}/doc/{document.id}/edit">
-      Edit
-      <i class="fas fa-key" />
-    </a>
-    &nbsp;
-  </div>
 </Medium>
 
 <style>
