@@ -365,8 +365,8 @@
   </form>
 
   {#if $admin > 1}
-    {#await import('$lib/components/utilities/JSON.svelte') then JSON}
-      <JSON.default obj={image} />
+    {#await import('svelte-pieces/data/JSON.svelte') then { default: JSON }}
+      <JSON obj={image} />
     {/await}
   {/if}
 {/if}

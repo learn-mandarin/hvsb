@@ -86,6 +86,14 @@
       Back to List
     </a>
 
+    {#if $admin > 1}
+      {#await import('svelte-pieces/data/JSON.svelte') then { default: JSON }}
+        <div class="ml-auto">
+          <JSON obj={data} />
+        </div>
+      {/await}
+    {/if}
+
     <button
       class="hover:bg-primary-500 text-primary-700 hover:text-white btn rounded
       px-4 py-2 font-bold hover:shadow text-sm focus:outline-none
@@ -116,20 +124,15 @@
 
   <slot translator={$translator} />
 
-  {#if $translator}
-    <div class="p-2 flex flex-wrap">
-      <slot name="translator" />
+  {#if $admin || (data && $user && data.createdBy === $user.uid)}
+    <div class="p-2">
+      <slot name="admin" />
     </div>
   {/if}
 
-  {#if $admin || (data && $user && data.createdBy === $user.uid)}
+  {#if $translator}
     <div class="p-2 flex flex-wrap">
-      <slot name="admin" />
-      {#if $admin > 1}
-        {#await import('$lib/components/utilities/JSON.svelte') then { default: JSON }}
-          <JSON obj={data} />
-        {/await}
-      {/if}
+      <slot name="translator" />
     </div>
   {/if}
 </div>

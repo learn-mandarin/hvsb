@@ -55,7 +55,7 @@
     placeholder="Translate Description" />
 
   {#if $admin > 1}
-    {#await import('$lib/components/utilities/JSON.svelte') then { default: JSON }}
+    {#await import('svelte-pieces/data/JSON.svelte') then { default: JSON }}
       <JSON obj={document} />
     {/await}
   {/if}

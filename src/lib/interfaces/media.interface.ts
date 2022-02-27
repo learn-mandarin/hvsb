@@ -14,6 +14,7 @@ export interface IMedia extends IFirestoreMetaData {
 
   // TODO: this is set in media.ts, is it still needed?
   currentVerses?: number[];
+  editorNotes?: string;
 }
 
 export type TranslationFields = {
