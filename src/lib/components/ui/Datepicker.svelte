@@ -26,7 +26,7 @@
 
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
-  import Button from './Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
 
   async function setManualSubscriptionEndDate(user: IUser, endDate: Date) {
     await updateOnline(`users/${user.uid}`, {

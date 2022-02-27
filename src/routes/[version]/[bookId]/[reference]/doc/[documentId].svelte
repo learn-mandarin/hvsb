@@ -94,6 +94,29 @@
     {/await}
   {/if}
 
+  <div slot="admin">
+    {#if document.editorNotes}
+      <div class="mb-4 p-2 bg-gray-200 rounded">
+        <div class="text-xs font-semibold">Editor Notes</div>
+        <ParsedParagraph value={document.editorNotes} />
+      </div>
+    {/if}
+
+    <div class="flex">
+      <a
+        sveltekit:prefetch
+        class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
+      border border-primary-700"
+        href="/{$page.params.version}/{$page.params.bookId}/{$page.params
+          .reference}/doc/{document.id}/edit"
+      >
+        Edit
+        <i class="fas fa-key" />
+      </a>
+      &nbsp;
+    </div>
+  </div>
+
   <div class="flex" slot="translator">
     <a
       sveltekit:prefetch
@@ -103,20 +126,6 @@
         .reference}/doc/{document.id}/translate"
     >
       Translate to {LanguageMappings[translatorLanguage]}
-      <i class="fas fa-key" />
-    </a>
-    &nbsp;
-  </div>
-
-  <div class="flex" slot="admin">
-    <a
-      sveltekit:prefetch
-      class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
-      border border-primary-700"
-      href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-        .reference}/doc/{document.id}/edit"
-    >
-      Edit
       <i class="fas fa-key" />
     </a>
     &nbsp;
