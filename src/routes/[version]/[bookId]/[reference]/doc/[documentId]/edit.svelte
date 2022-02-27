@@ -354,9 +354,14 @@
     >
       Add Paragraph
     </Button>
-    <div class="mt-5 prose max-w-none">
-      <ClassicCustomized bind:html={document.editorNotes} />
+
+    <div class="my-4 p-2 bg-gray-200 rounded">
+      <div class="text-xs font-semibold mb-2">Editor Notes (will not be published)</div>
+      <div class="prose max-w-none">
+        <ClassicCustomized bind:html={document.editorNotes} />
+      </div>
     </div>
+
     {#if $admin > 1}
       <input
         type="text"
