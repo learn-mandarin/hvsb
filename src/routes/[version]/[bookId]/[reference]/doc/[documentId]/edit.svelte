@@ -19,13 +19,7 @@
   import EditVerseIds from '$lib/components/content/EditVerseIds.svelte';
   import ImageInDoc from '../_ImageInDoc.svelte';
   import ClassicCustomized from '$lib/components/editor/ClassicCustomized.svelte';
-  import {
-    addOnline,
-    collectionStore,
-    deleteDocumentOnline,
-    Doc,
-    updateOnline,
-  } from '$sveltefirets';
+  import { addOnline, collectionStore, deleteDocumentOnline, Doc, update } from '$sveltefirets';
   import { orderBy } from 'firebase/firestore';
 
   export let documentId: string;
@@ -42,7 +36,7 @@
 
   async function save(document: IDocument) {
     try {
-      await updateOnline(`media/${document.id}`, document);
+      await update(`media/${document.id}`, document);
 
       if (document.authors) {
         for (const authorInDoc of document.authors) {
@@ -377,8 +371,8 @@
   </form>
 
   {#if $admin > 1}
-    {#await import('$lib/components/utilities/JSON.svelte') then JSON}
-      <JSON.default obj={document} />
+    {#await import('svelte-pieces/data/JSON.svelte') then { default: JSON }}
+      <JSON obj={document} />
     {/await}
   {/if}
 {/if}
