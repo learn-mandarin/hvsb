@@ -12,8 +12,7 @@
         alt={title}
         {src}
         class="shadow-lg rounded-lg max-w-full mx-auto"
-        style="max-height: 120px;"
-      />
+        style="max-height: 120px;" />
     </a>
     <div class="pt-6 text-center">
       <h5 class="text-xl font-bold">{title}</h5>

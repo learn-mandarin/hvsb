@@ -43,8 +43,7 @@
   <div
     class="relative pt-16 pb-16 sm:pb-32 flex content-center items-center
         justify-center"
-    style="min-height: 75vh;"
-  >
+    style="min-height: 75vh;">
     <div class="absolute top-0 w-full h-full">
       <!-- srcset="
         https://res.cloudinary.com/hvsb/image/upload/w_2000,h_1600,c_fill/v1581986226/home/shepherds_ydlife.jpg
@@ -59,8 +58,7 @@
       <img
         src="https://res.cloudinary.com/hvsb/image/upload/w_1500,h_1200,c_fill/v1583535926/home/Jerash_Pano_8_v7myoz.jpg"
         alt=""
-        style="width: 100%; height: 100%; object-fit: cover;"
-      />
+        style="width: 100%; height: 100%; object-fit: cover;" />
       <!-- <img
         src="https://res.cloudinary.com/hvsb/image/upload/w_1500,h_1200,c_fill/v1581986226/home/shepherds_ydlife.jpg"
         alt=""
@@ -79,8 +77,7 @@
         sveltekit:prefetch
         class="py-3 sm:py-4 px-4 sm:px-6 text-xl sm:text-3xl rounded bg-white
             text-gray-900 font-semibold inline-block hover:bg-gray-200"
-        href={`/${currentVersion}/${currentBook}/${currentChapter}`}
-      >
+        href={`/${currentVersion}/${currentBook}/${currentChapter}`}>
         {currentBook === 'MAT' && currentChapter == '1' ? 'Begin Reading' : 'Resume Reading'}
       </a>
       <!-- <Button
@@ -106,8 +103,7 @@
     <div
       class="top-auto bottom-0 left-0 right-0 w-full absolute
           pointer-events-none overflow-hidden"
-      style="height: 70px; transform: translateZ(0px);"
-    >
+      style="height: 70px; transform: translateZ(0px);">
       <svg
         class="absolute bottom-0 overflow-hidden"
         xmlns="http://www.w3.org/2000/svg"
@@ -115,8 +111,7 @@
         version="1.1"
         viewBox="0 0 2560 100"
         x="0"
-        y="0"
-      >
+        y="0">
         <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100" />
       </svg>
     </div>
@@ -141,14 +136,12 @@
         <div class="md:pt-6 w-full md:w-4/12 px-4 text-center">
           <div
             class="relative flex flex-col min-w-0 break-words bg-white w-full
-                mb-8 shadow-lg rounded-lg"
-          >
+                mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div
                 class="text-white p-3 text-center inline-flex items-center
                     justify-center w-12 h-12 mb-5 shadow-lg rounded-full
-                    bg-red-400"
-              >
+                    bg-red-400">
                 <i class="fas fa-user" />
               </div>
               <h6 class="text-xl font-semibold">Biographies</h6>
@@ -163,14 +156,12 @@
         <div class="md:pt-6 w-full md:w-4/12 px-4 text-center">
           <div
             class="relative flex flex-col min-w-0 break-words bg-white w-full
-                mb-8 shadow-lg rounded-lg"
-          >
+                mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div
                 class="text-white p-3 text-center inline-flex items-center
                     justify-center w-12 h-12 mb-5 shadow-lg rounded-full
-                    bg-primary-400"
-              >
+                    bg-primary-400">
                 <i class="far fa-handshake" />
               </div>
               <h6 class="text-xl font-semibold">Customs & Culture</h6>
@@ -184,14 +175,12 @@
         <div class="md:pt-6 w-full md:w-4/12 px-4 text-center">
           <div
             class="relative flex flex-col min-w-0 break-words bg-white w-full
-                mb-8 shadow-lg rounded-lg"
-          >
+                mb-8 shadow-lg rounded-lg">
             <div class="px-4 py-5 flex-auto">
               <div
                 class="text-white p-3 text-center inline-flex items-center
                     justify-center w-12 h-12 mb-5 shadow-lg rounded-full
-                    bg-green-400"
-              >
+                    bg-green-400">
                 <i class="fas fa-question" />
               </div>
               <h6 class="text-xl font-semibold">Theological Issues</h6>
@@ -207,8 +196,7 @@
         <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
           <div
             class="text-gray-600 p-3 text-center inline-flex items-center
-                justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
-          >
+                justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
             <i class="fas fa-columns text-xl" />
           </div>
           <h3 class="text-3xl mb-2 font-semibold leading-normal">Parallel Learning</h3>
@@ -225,21 +213,18 @@
         <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
           <div
             class="relative flex flex-col min-w-0 break-words w-full my-6
-                shadow-lg rounded-lg bg-primary-600"
-          >
+                shadow-lg rounded-lg bg-primary-600">
             <img
               src="https://res.cloudinary.com/hvsb/image/upload/w_800/v1584228078/home/side-by-side-matt1_wltivk.jpg"
               alt="View study resources beside the text"
-              class="w-full align-middle rounded-t-lg"
-            />
+              class="w-full align-middle rounded-t-lg" />
             <blockquote class="relative p-8 mb-4">
               <svg
                 preserveAspectRatio="none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 583 95"
                 class="absolute left-0 w-full block"
-                style="height: 95px; top: -94px;"
-              >
+                style="height: 95px; top: -94px;">
                 <polygon points="-30,95 583,95 583,65" class="text-primary-600 fill-current" />
               </svg>
               <h4 class="text-xl font-bold text-white">Side-by-side</h4>
@@ -265,8 +250,7 @@
                     <span
                       class="text-xs font-semibold inline-block py-1 px-2
                           uppercase rounded-full text-primary-600 shadow
-                          bg-gray-100 mr-3"
-                    >
+                          bg-gray-100 mr-3">
                       <i class="fas fa-image" />
                     </span>
                   </div>
@@ -281,8 +265,7 @@
                     <span
                       class="text-xs font-semibold inline-block py-1 px-2
                           uppercase rounded-full text-primary-600 shadow
-                          bg-gray-100 mr-3"
-                    >
+                          bg-gray-100 mr-3">
                       <i class="far fa-file-alt" />
                     </span>
                   </div>
@@ -297,8 +280,7 @@
                     <span
                       class="text-xs font-semibold inline-block py-1 px-2
                           uppercase rounded-full text-primary-600 shadow
-                          bg-gray-100 mr-3"
-                    >
+                          bg-gray-100 mr-3">
                       <i class="fas fa-table" />
                     </span>
                   </div>
@@ -313,8 +295,7 @@
                     <span
                       class="text-xs font-semibold inline-block py-1 px-2
                           uppercase rounded-full text-primary-600 shadow
-                          bg-gray-100 mr-3"
-                    >
+                          bg-gray-100 mr-3">
                       <i class="fas fa-globe-europe" />
                     </span>
                   </div>
@@ -329,8 +310,7 @@
                     <span
                       class="text-xs font-semibold inline-block py-1 px-2
                           uppercase rounded-full text-primary-600 shadow
-                          bg-gray-100 mr-3"
-                    >
+                          bg-gray-100 mr-3">
                       <i class="fas fa-play" />
                     </span>
                   </div>
@@ -347,8 +327,7 @@
             <img
               alt="..."
               class="max-w-full rounded-lg shadow-lg"
-              src="https://lh3.googleusercontent.com/jRHQT5wh91aMzyUxo9gbOsAjR6R6oZ4b2hRdgVXUdIBf1rzBHqp8zGOD2ClPk88MDSZQP3SNHdkABA7XYA53=s400-p"
-            />
+              src="https://lh3.googleusercontent.com/jRHQT5wh91aMzyUxo9gbOsAjR6R6oZ4b2hRdgVXUdIBf1rzBHqp8zGOD2ClPk88MDSZQP3SNHdkABA7XYA53=s400-p" />
           </a>
         </div>
       </div>
@@ -359,8 +338,7 @@
     <div
       class="bottom-auto top-0 left-0 right-0 w-full absolute
           pointer-events-none overflow-hidden -mt-20"
-      style="height: 80px; transform: translateZ(0px);"
-    >
+      style="height: 80px; transform: translateZ(0px);">
       <svg
         class="absolute bottom-0 overflow-hidden"
         xmlns="http://www.w3.org/2000/svg"
@@ -368,8 +346,7 @@
         version="1.1"
         viewBox="0 0 2560 100"
         x="0"
-        y="0"
-      >
+        y="0">
         <polygon class="text-white fill-current" points="2560 0 2560 100 0 100" />
       </svg>
     </div>
@@ -380,13 +357,11 @@
             <a
               href="/dr-house"
               class="inline-block overflow-hidden rounded-full shadow-lg"
-              style="width: 150px; height: 150px;"
-            >
+              style="width: 150px; height: 150px;">
               <img
                 alt="Dr. H. Wayne House"
                 src="https://www.socalsem.edu/wp-content/uploads/2016/07/h-wayne-house.jpg"
-                style="transform: scale(1.2)"
-              />
+                style="transform: scale(1.2)" />
             </a>
           </div>
           <h2 class="text-4xl font-semibold">Author</h2>
@@ -422,45 +397,38 @@
           href="https://faithseminary.edu/"
           title="Faith International University"
           src="https://lh3.googleusercontent.com/pMODLDqHF-q9aN2BySdjYlW82HYwDfp8AXgcns8mq-yCmzHKSmQHWgYHUyEcLJ9mwBhtCSLvKIjVlAHBzV2KiCB614ANwtVAXFg=h240"
-          description="Committed to the historic Christian faith and the inspiration and inerrancy of the Bible"
-        />
+          description="Committed to the historic Christian faith and the inspiration and inerrancy of the Bible" />
         <Friend
           href="https://www.bibleplaces.com/"
           title="Bible Places"
           src="https://lh3.googleusercontent.com/9x2asq8KOUEuZHaI6jXg_nO4hOpQRJNF7ef80M8SgWllfJl5YAdVWPup67LS1Nr1-V31r3DwdpLDDgojuaIi=h240"
-          description="Superb photos of Bible sites and artifacts"
-        />
+          description="Superb photos of Bible sites and artifacts" />
         <Friend
           href="https://www.accordancebible.com/"
           title="Accordance Bible Software"
           src="https://lh3.googleusercontent.com/xWQKy19tdEa_Ee591Xovb0jDzUqrr0NG7pwiwfG2QtD6l5qLNh7RYJQqeB_Lg3i8gkfdze4mzVXMZKAk8EeMyg=h240"
-          description=" Excellent research program for the serious student of Scripture, particularly in the original languages"
-        />
+          description=" Excellent research program for the serious student of Scripture, particularly in the original languages" />
         <Friend
           href="https://deanbibleministries.org/"
           title="Dean Bible Ministries"
           src="https://lh3.googleusercontent.com/hHYZU9ZPFeP0A6VvJv22wxf8I5RAq7QpRgO8ybWb6_LX-jmqiV-3HmvOj8zfl2HTz28AvCUwUySvc6MnYQgvXQ=h240"
-          description="Expositional Teaching of the Bible"
-        />
+          description="Expositional Teaching of the Bible" />
         <Friend
           href="https://www.worldofthebible.com/"
           title="World of the Bible"
           src="https://res.cloudinary.com/hvsb/image/upload/h_240/v1591303089/friends/WBM_Logo_best_nf9vny.jpg"
-          description="A look at the Jewish temple in ancient and modern Jerusalem like you have never seen before"
-        />
+          description="A look at the Jewish temple in ancient and modern Jerusalem like you have never seen before" />
         <Friend
           href="https://viu.ves.edu/viu-school-of-archaeology/"
           title="Veritas International University"
           src="https://res.cloudinary.com/hvsb/image/upload/h_240/v1596552719/friends/VIU2_300dpi_aupwuo.jpg"
           description="Evangelical university committed to the study of Scripture, apologetics, and
-          biblical archaeology"
-        />
+          biblical archaeology" />
         <Friend
           href="https://tutkutours.com/"
           title="Tutku Tours"
           src="https://res.cloudinary.com/hvsb/image/upload/h_240/v1620767844/friends/TutkuTours_sxrsfx.png"
-          description="Offering numerous tour packages in Turkey, Europe, and the Eastern Mediterranean."
-        />
+          description="Offering numerous tour packages in Turkey, Europe, and the Eastern Mediterranean." />
       </div>
     </div>
   </section>
@@ -469,8 +437,7 @@
     <div
       class="bottom-auto top-0 left-0 right-0 w-full absolute
           pointer-events-none overflow-hidden -mt-20"
-      style="height: 80px; transform: translateZ(0px);"
-    >
+      style="height: 80px; transform: translateZ(0px);">
       <svg
         class="absolute bottom-0 overflow-hidden"
         xmlns="http://www.w3.org/2000/svg"
@@ -478,8 +445,7 @@
         version="1.1"
         viewBox="0 0 2560 100"
         x="0"
-        y="0"
-      >
+        y="0">
         <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100" />
       </svg>
     </div>
@@ -494,12 +460,10 @@
           </p>
           {#if !$user}
             <Button onclick={() => (modal = 'auth')} color="white" form="filled" size="lg"
-              >Sign Up</Button
-            >
+              >Sign Up</Button>
           {:else if !isSubscriber($user)}
             <Button onclick={() => (modal = 'subscribe')} color="white" form="filled" size="lg"
-              >Subscribe</Button
-            >
+              >Subscribe</Button>
           {/if}
         </div>
       </div>
@@ -510,8 +474,7 @@
     <div
       class="bottom-auto top-0 left-0 right-0 w-full absolute
           pointer-events-none overflow-hidden -mt-20"
-      style="height: 80px; transform: translateZ(0px);"
-    >
+      style="height: 80px; transform: translateZ(0px);">
       <svg
         class="absolute bottom-0 overflow-hidden"
         xmlns="http://www.w3.org/2000/svg"
@@ -519,8 +482,7 @@
         version="1.1"
         viewBox="0 0 2560 100"
         x="0"
-        y="0"
-      >
+        y="0">
         <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100" />
       </svg>
     </div>
@@ -571,8 +533,7 @@
     <Auth
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 
@@ -581,8 +542,7 @@
     <Subscribe
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 

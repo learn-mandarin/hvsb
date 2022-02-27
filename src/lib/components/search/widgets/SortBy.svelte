@@ -35,8 +35,7 @@
     on:change={(e) => {
       //@ts-ignore
       refine(e.target.value);
-    }}
-  >
+    }}>
     {#each options as option}
       <option value={option.value}>{option.label}</option>
     {/each}

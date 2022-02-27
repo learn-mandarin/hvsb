@@ -33,8 +33,7 @@
             <a
               href="/admin"
               class="cursor-pointer px-3 py-2 text-sm font-medium text-white
-              bg-gray-800 rounded-md hover:bg-gray-700"
-            >
+              bg-gray-800 rounded-md hover:bg-gray-700">
               Admin Panel
               <i class="fas fa-key" />
             </a>
@@ -61,8 +60,7 @@
             </div>
             <Button
               onclick={() => createBillingPortalSession(document.location.href)}
-              form="filled"
-            >
+              form="filled">
               Resubscribe in Billing Portal
               <i class="fas fa-chevron-right" />
             </Button>
@@ -151,8 +149,7 @@
             id="newsletter"
             name="newsletter"
             type="checkbox"
-            class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
-          />
+            class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded" />
           <label for="newsletter" class="ml-2 block text-sm text-gray-900">
             Receive newsletter updates
           </label>
@@ -178,8 +175,7 @@
     <Subscribe
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 
@@ -188,7 +184,6 @@
     <Contact
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}

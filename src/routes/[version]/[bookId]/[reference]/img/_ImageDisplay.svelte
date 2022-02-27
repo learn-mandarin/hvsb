@@ -33,15 +33,13 @@
 
 <div
   class="bg-black relative text-white text-sm font-medium md:rounded-lg
-    overflow-hidden text-shadow"
->
+    overflow-hidden text-shadow">
   <a href="https://lh3.googleusercontent.com/{image.gcs}=s0" target="_blank" class="pointer">
     <img
       alt={image.title || ''}
       class="w-full"
       style="max-height: 80vh; object-position: center; object-fit: contain;"
-      src="https://lh3.googleusercontent.com/{image.gcs}=s1200"
-    />
+      src="https://lh3.googleusercontent.com/{image.gcs}=s1200" />
   </a>
 
   <div class="img-verses absolute pt-2 px-2 top-0 left-0">

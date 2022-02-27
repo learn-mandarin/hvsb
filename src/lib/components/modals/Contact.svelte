@@ -62,8 +62,7 @@
           bind:value={message}
           class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded
           text-sm shadow focus:outline-none focus:ring w-full"
-          placeholder="Enter your message..."
-        />
+          placeholder="Enter your message..." />
         <div class="flex text-xs">
           <div class="text-gray-500 ml-auto" class:emphasis={message.length > 999}>
             {message.length}/1000
@@ -83,8 +82,7 @@
             class="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded
             text-sm shadow focus:outline-none focus:ring w-full"
             placeholder="Email"
-            style="transition: all 0.15s ease 0s;"
-          />
+            style="transition: all 0.15s ease 0s;" />
         </div>
       {/if}
 
@@ -94,11 +92,9 @@
 
       <div class="mt-4">
         <Button loading={sending} type="submit" form="filled" color="black" size="lg"
-          >Send Message</Button
-        >
+          >Send Message</Button>
         <Button disabled={sending} onclick={close} form="simple" size="lg" color="black"
-          >Cancel</Button
-        >
+          >Cancel</Button>
       </div>
     </form>
   {:else if status == 'success'}

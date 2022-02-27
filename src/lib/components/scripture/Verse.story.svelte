@@ -23,8 +23,7 @@
 <Variant name="Knobbed" description="Trying knobs">
   <Knobs
     input={{ myBool: false, myNum: 10, myStr: 'hello', myRange: '-10-10;5' }}
-    let:output={{ myBool, myNum, myStr, myRange }}
-  >
+    let:output={{ myBool, myNum, myStr, myRange }}>
     <Button on:click={eventCallback}>{myStr}</Button>
   </Knobs>
 </Variant>
@@ -35,8 +34,7 @@
       firstProp: { type: 'text', default: 'hello world' },
       secondProp: { type: 'number', default: 123 },
     }}
-    let:output={{ firstProp, secondProp }}
-  >
+    let:output={{ firstProp, secondProp }}>
     <Button on:click={eventCallback}>{firstProp}, {secondProp}</Button>
   </Knobs>
 </Variant>

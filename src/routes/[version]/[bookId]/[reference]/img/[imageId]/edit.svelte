@@ -101,8 +101,7 @@
       //@ts-ignore
       image = e.detail.data;
     }
-  }}
-/>
+  }} />
 
 {#if image}
   <form on:submit|preventDefault={() => save(image)}>
@@ -112,8 +111,7 @@
       font-bold hover:shadow text-sm focus:outline-none focus:border-green-700
       focus:ring-green-500 uppercase
       leading-6 mr-1"
-        type="submit"
-      >
+        type="submit">
         <span class="mr-1">Save</span>
       </button>
 
@@ -122,8 +120,7 @@
           class="btn hover:bg-red-200 text-red-700 px-4 py-2 font-bold text-sm
       rounded  uppercase leading-6 ml-auto"
           type="button"
-          on:click={() => deleteImage(image)}
-        >
+          on:click={() => deleteImage(image)}>
           <i class="fas fa-trash mr-1" />
           <span class="hidden sm:inline">Delete</span>
         </button>
@@ -131,8 +128,8 @@
       <a
         class="hover:bg-gray-200 text-gray-500 px-4 py-2 font-bold text-sm rounded
      uppercase leading-6"
-        href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}/img/{image.id}"
-      >
+        href="/{$page.params.version}/{$page.params.bookId}/{$page.params
+          .reference}/img/{image.id}">
         <i class="fas fa-times mr-1" />
         Cancel
       </a>
@@ -152,8 +149,7 @@
           autofocus
           bind:value={image.title}
           class="form-input block w-full text-lg"
-          placeholder="Enter image title"
-        />
+          placeholder="Enter image title" />
       </div>
     </div>
 
@@ -175,8 +171,7 @@
                 image.location = [...image.location];
               }}
               class="cursor-pointer justify-center items-center flex
-          bg-gray-200 hover:bg-gray-300 rounded-full h-4 w-4 ml-1"
-            >
+          bg-gray-200 hover:bg-gray-300 rounded-full h-4 w-4 ml-1">
               <i class="fas fa-times text-xs" />
             </button>
             {#if location && isAddingAttributeToDB($locations, location)}
@@ -193,8 +188,7 @@
               bind:value={location}
               list="locations"
               class="form-input block w-full"
-              placeholder="Enter location"
-            />
+              placeholder="Enter location" />
             <datalist id="locations">
               {#each $locations as dbLocation}
                 <option>{dbLocation.name}</option>
@@ -214,8 +208,7 @@
         }
         image.location = [...image.location, ''];
       }}
-      class="bg-gray-100 hover:bg-gray-200 rounded mt-1 px-2 py-1 text-xs"
-    >
+      class="bg-gray-100 hover:bg-gray-200 rounded mt-1 px-2 py-1 text-xs">
       Add Location
     </button>
 
@@ -233,8 +226,7 @@
                 image.credit = [...image.credit];
               }}
               class="cursor-pointer justify-center items-center flex
-          bg-gray-200 hover:bg-gray-300 rounded-full h-4 w-4 ml-1"
-            >
+          bg-gray-200 hover:bg-gray-300 rounded-full h-4 w-4 ml-1">
               <i class="fas fa-times text-xs" />
             </button>
             {#if credit && isAddingAttributeToDB($photographers, credit)}
@@ -251,8 +243,7 @@
               bind:value={credit}
               list="credits"
               class="form-input block w-full"
-              placeholder="Enter credit"
-            />
+              placeholder="Enter credit" />
             <datalist id="credits">
               {#each $photographers as dbPhotographer}
                 <option>{dbPhotographer.name}</option>
@@ -272,8 +263,7 @@
         }
         image.credit = [...image.credit, ''];
       }}
-      class="bg-gray-100 hover:bg-gray-200 rounded mt-1 px-2 py-1 text-xs"
-    >
+      class="bg-gray-100 hover:bg-gray-200 rounded mt-1 px-2 py-1 text-xs">
       Add Credit
     </button>
 
@@ -285,8 +275,7 @@
         <select
           id="genre"
           bind:value={image.genre}
-          class="focus:ring-primary-500 focus:border-primary-500 shadow-sm border-gray-300 rounded-md block w-full"
-        >
+          class="focus:ring-primary-500 focus:border-primary-500 shadow-sm border-gray-300 rounded-md block w-full">
           {#each genres as genre}
             <option value={genre.key}>{genre.title}</option>
           {/each}
@@ -313,8 +302,7 @@
           bind:value={image.subject}
           list="subjects"
           class="form-input block w-full"
-          placeholder="Enter subject"
-        />
+          placeholder="Enter subject" />
         <datalist id="subjects">
           {#each $subjects as subject}
             <option>{subject.name}</option>
@@ -337,8 +325,7 @@
           type="number"
           bind:value={image.yearTaken}
           class="form-input w-full"
-          placeholder="Enter year"
-        />
+          placeholder="Enter year" />
       </div>
     </div>
 
@@ -352,8 +339,7 @@
           type="text"
           bind:value={image.sourceURL}
           class="form-input w-full"
-          placeholder="https://..."
-        />
+          placeholder="https://..." />
       </div>
     </div>
 
@@ -365,8 +351,7 @@
           id="published"
           bind:checked={image.published}
           type="checkbox"
-          class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
-        />
+          class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded" />
         <label for="published" class="ml-2 block text-sm leading-5 text-gray-900 cursor-pointer">
           Published
         </label>

@@ -14,6 +14,5 @@
   <FirebaseUiAuth
     signInWith={{ google: true, emailPassword: true }}
     on:close
-    on:updateuserdata={(e) => updateUserData(e.detail.user, e.detail.isNewUser)}
-  />
+    on:updateuserdata={(e) => updateUserData(e.detail.user, e.detail.isNewUser)} />
 </Modal>

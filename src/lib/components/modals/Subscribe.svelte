@@ -82,8 +82,7 @@
             type="radio"
             class="focus:ring-primary-500 text-primary-700"
             bind:group={period}
-            value="yearly"
-          />
+            value="yearly" />
           <span class="ml-2"> $50/year <small>(2 mo. free)</small> </span>
         </label>
         <label class="inline-flex items-center">
@@ -91,8 +90,7 @@
             type="radio"
             class="focus:ring-primary-500 text-primary-700"
             bind:group={period}
-            value="monthly"
-          />
+            value="monthly" />
           <span class="ml-2">$5/month</span>
         </label>
       </div>
@@ -131,7 +129,6 @@
     <Contact.default
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}

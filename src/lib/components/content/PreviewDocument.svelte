@@ -16,12 +16,10 @@
   sveltekit:prefetch
   class="{!document.published &&
     'ml-4 sm:ml-6'} hover:bg-gray-200 shadow overflow-hidden rounded-sm mb-2 flex
-  items-stretch text-left"
->
+  items-stretch text-left">
   <div
     class="media-block {genreBgColor(document.genre)} text-white flex
-    items-center justify-center font-bold text-3xl"
-  >
+    items-center justify-center font-bold text-3xl">
     <i class={genreIcon(document.genre)} />
   </div>
 
@@ -40,8 +38,7 @@
         {#if !document.published}
           <span
             class="px-2 py-1 leading-tight bg-orange-200 rounded text-orange-600 text-xs font-medium"
-            >Unpublished</span
-          >
+            >Unpublished</span>
         {/if}
       </div>
       {#if !adminPanel && document.currentVerses}
@@ -59,8 +56,7 @@
             href={href ||
               `WEB/${verseId.split('.')[0]}/${verseId.split('.')[1]}/doc/${document.id}`}
             sveltekit:prefetch
-            class="ml-1 mt-1 px-2 py-1 leading-tight text-sm font-medium bg-gray-100 hover:bg-white rounded"
-          >
+            class="ml-1 mt-1 px-2 py-1 leading-tight text-sm font-medium bg-gray-100 hover:bg-white rounded">
             {bookAbbrev(verseId.split('.')[0])}
             {verseId.split('.')[1]}:{verseId.split('.')[2]}
           </a>

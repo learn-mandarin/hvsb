@@ -33,24 +33,21 @@
   <div
     class="relative print:hidden shrink-0"
     use:clickOutside
-    on:clickedOutside={() => (open = false)}
-  >
+    on:clickedOutside={() => (open = false)}>
     {#if user.photoURL}
       <button type="button" on:click={() => (open = !open)} class="p-1 block focus:outline-none">
         <img
           class="rounded-full"
           style="width: 34px; height: 34px;"
           alt={user.displayName[0]}
-          src={user.photoURL}
-        />
+          src={user.photoURL} />
       </button>
     {:else}
       <button
         type="button"
         on:click={() => (open = !open)}
         class="{!home ? 'hover:bg-gray-200' : 'hover:bg-white hover:text-black'}
-        block rounded py-2 px-3 font-semibold focus:outline-none"
-      >
+        block rounded py-2 px-3 font-semibold focus:outline-none">
         <span class="hidden sm:block">{user.displayName.split(' ')[0]}</span>
         <span class="sm:hidden">{user.displayName[0]}</span>
       </button>
@@ -60,8 +57,7 @@
       <div
         transition:fly={{ y: -10, duration: 150 }}
         class="origin-top-right absolute z-10 right-0 mt-2 -mr-1 w-48 rounded-md
-        shadow-lg"
-      >
+        shadow-lg">
         <div class="py-1 rounded-md bg-white shadow-sm" on:click={() => (open = !open)}>
           <div class="px-4 py-2 text-xs font-semibold text-gray-600 border-b">
             {user.displayName}
@@ -73,8 +69,7 @@
             <a
               href="/admin"
               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-              "
-            >
+              ">
               Admin Panel
               <i class="fas fa-key" />
             </a>
@@ -87,8 +82,7 @@
                 });
               }}
               class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-            "
-            >
+            ">
               Demote to regular user
               <i class="fas fa-key" />
             </button>
@@ -129,8 +123,7 @@
                 });
               }}
               class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-            "
-            >
+            ">
               Return to Admin Role
               <i class="fas fa-key" />
             </button>
@@ -138,16 +131,14 @@
           <a
             href="/account"
             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-            "
-          >
+            ">
             Account Details
           </a>
           <button
             on:click={logOut}
             class="block w-full text-left px-4 py-2 text-sm text-gray-700
             hover:bg-gray-100 
-            focus:outline-none"
-          >
+            focus:outline-none">
             Sign Out
           </button>
           {#if firebaseConfig.projectId === 'hvsb-dev'}
@@ -165,8 +156,7 @@
               }}
               class="block w-full text-left px-4 py-2 text-sm text-gray-700
           hover:bg-gray-100 
-          focus:outline-none"
-            >
+          focus:outline-none">
               Set Admin Role Level (dev only)
             </button>
           {/if}
@@ -183,8 +173,7 @@
       : 'border border-white hover:bg-white hover:border-transparent'}
     py-2 px-3 ml-2 rounded bg-transparent font-semibold hover:text-black
     print:hidden"
-    on:click={() => (modal = 'auth')}
-  >
+    on:click={() => (modal = 'auth')}>
     <i class="fas fa-sign-in-alt" />
     <span class="ml-1 hidden sm:inline">Sign In</span>
   </button>

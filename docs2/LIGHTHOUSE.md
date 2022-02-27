@@ -1,2 +1,2 @@
 under ci>assert:
-      "preset": "lighthouse:no-pwa",
+"preset": "lighthouse:no-pwa",

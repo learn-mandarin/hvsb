@@ -15,25 +15,24 @@ Demonstrates how to write Cloud Firestore + Cloud Functions **unit tests** and o
 - To run an single test using the command line, simply preface the test name with jest, as in `jest simpleCallable`
 - To use the Firebase Emulator UI at the same time as testing you can run `npm run serve` to get the database and cloud functions emulators running and then run the desired test in another terminal, for example: `jest makeUppercase.emulator --watch`
 
-
 ## Ways to test Cloud Functions
+
 - Via test runner as seen in simpleCallable.test.ts
 - Using online database
 - Using offline testing utilities
 - Open Emulator, modify files and watch triggered functions (if applicable)
 
-
 ## Create New Jest Test
+
 1. To ensure everything is working, create a basic test like so:
-test('foo', () => {
-    expect(true).toBe(true);
-})
-2. Make changes to your *.test.ts file and then run the appropriate testing command.
+   test('foo', () => {
+   expect(true).toBe(true);
+   })
+2. Make changes to your \*.test.ts file and then run the appropriate testing command.
 
 See https://jestjs.io/docs/en/getting-started for tips
 
-
-------------
+---
 
 ## References consulted
 
@@ -47,12 +46,11 @@ See https://jestjs.io/docs/en/getting-started for tips
 - https://firebase.google.com/docs/emulator-suite/connect_and_prototype?database=RTDB && https://firebase.google.com/docs/emulator-suite/connect_functions#web
 - https://firebase.google.com/docs/rules/unit-tests#database
 
-
 ## Connect emulator to frontend app
 
 ```
 firebase.initializeApp(yourFirebaseConfig);
-  
+
 
   if (location.hostname === "localhost") {
 
@@ -65,10 +63,10 @@ firebase.initializeApp(yourFirebaseConfig);
   }
 ```
 
-
 ## Generate Fake Data Quickly
 
 Paste code into browser console to quickly create 100 fake documents.
+
 ```
 (function () {
   const script = document.createElement('script');
@@ -97,4 +95,5 @@ Paste code into browser console to quickly create 100 fake documents.
   }, 2000);
 })();
 ```
+
 Or automate script with Tampermonkey Chrome extension

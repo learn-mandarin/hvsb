@@ -52,8 +52,7 @@
     <div class="flex mb-3">
       <select
         bind:value={bookId}
-        class="mt-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1"
-      >
+        class="mt-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1">
         {#each bibleBooks as book, i}
           <option value={book.id}>{book.name}</option>
         {/each}
@@ -62,8 +61,7 @@
       <select
         style="width: 90px;"
         bind:value={chapter}
-        class="mt-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1"
-      >
+        class="mt-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1">
         {#each { length: chaptersCount } as chapter, i}
           <option value={i + 1}>{i + 1}</option>
         {/each}
@@ -72,8 +70,7 @@
       <select
         style="width: 90px;"
         bind:value={verse}
-        class="mt-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5"
-      >
+        class="mt-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5">
         {#each { length: versesCount } as verses, i}
           <option value={i + 1}>{i + 1}</option>
         {/each}

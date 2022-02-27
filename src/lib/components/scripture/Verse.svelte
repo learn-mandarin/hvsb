@@ -60,8 +60,7 @@
       <div
         class="h-20 relative overflow-hidden md:opacity-75 transition-opacity
         duration-200 hover:opacity-100 rounded my-2 bg-black"
-        title="Video"
-      >
+        title="Video">
         {#await fetchVideoData(medium.id)}
           <i class="fas fa-play text-white absolute left-2 top-3" />
         {:then data}
@@ -69,8 +68,7 @@
             alt=""
             class="h-full w-full object-cover"
             style="object-position: 0 33%;"
-            src={data.pictures.sizes[3].link.replace('?r=pad', '')}
-          />
+            src={data.pictures.sizes[3].link.replace('?r=pad', '')} />
           <div class="absolute left-2 top-2 text-white text-shadow">
             <i class="fas fa-play mr-1" />
             {data.name.replace(/\([^()]*\)$/, '')}

@@ -16,8 +16,7 @@
   class:p-3={padding}
   class:mt-14={marginTop}
   class={$$props.class}
-  in:fade={{ duration, easing: cubicInOut }}
->
+  in:fade={{ duration, easing: cubicInOut }}>
   <!-- in:fade={{ duration, easing: cubicInOut, delay: duration }} -->
   <!-- out:fade={{ duration, easing: cubicInOut }} -->
   <!-- {#if !adminGuard || $admin} -->

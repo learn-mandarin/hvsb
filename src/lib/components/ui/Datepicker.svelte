@@ -58,12 +58,10 @@
       class="border border-gray-500"
       bind:this={dateInput}
       type="text"
-      placeholder="Click to select"
-    />
+      placeholder="Click to select" />
   </div>
   <div>
     <Button color="green" onclick={() => setManualSubscriptionEndDate(user, selectedDate)}
-      >Save</Button
-    >
+      >Save</Button>
   </div>
 </Modal>

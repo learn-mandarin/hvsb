@@ -62,8 +62,7 @@
     ref={store.ref}
     error={store.error}
     first={store.meta.first}
-    last={store.meta.last}
-  />
+    last={store.meta.last} />
 {:else if store.loading}
   <slot name="loading" />
 {:else}

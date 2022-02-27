@@ -66,8 +66,7 @@
       border-solid border-gray-400 shadow-lg fixed"
       style="right: 12px;"
       sveltekit:prefetch
-      href="/{version}/{bookId}/1"
-    >
+      href="/{version}/{bookId}/1">
       <i class="fas fa-chevron-right text-center" style="width: 1rem;" />
     </a>
 
