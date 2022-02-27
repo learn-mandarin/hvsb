@@ -1,4 +1,4 @@
- /* .scripture {
+/* .scripture {
     font-family: "CharisSIL", serif;
     line-height: 1.5;
     color: #333;
@@ -50,10 +50,10 @@
   color: #999999;
 }
 .scripture .ca:before {
-  content: "(";
+  content: '(';
 }
 .scripture .ca:after {
-  content: ")" !important;
+  content: ')' !important;
 }
 .scripture .cl {
   text-align: center;
@@ -65,31 +65,32 @@
   font-style: italic;
 }
 .scripture .v,
-.scripture sup[class^="v"] {
+.scripture sup[class^='v'] {
   color: black;
   font-size: 0.7em;
   letter-spacing: -0.03em;
   vertical-align: 0.25em;
   line-height: 0;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-weight: bold;
   top: inherit;
-}.scripture .v:after,
+}
+.scripture .v:after,
 .scripture sup:after {
-  content: "\a0";
+  content: '\a0';
 }
 
 .scripture sup + sup:before {
-  content: "\a0";
+  content: '\a0';
 }
 .scripture .va {
   font-style: italic;
 }
 .scripture .va:before {
-  content: "(";
+  content: '(';
 }
 .scripture .va:after {
-  content: ")" !important;
+  content: ')' !important;
 }
 .scripture .xo {
   font-weight: bold;
@@ -104,7 +105,10 @@
   text-decoration: underline;
   padding: 0.1em;
 }
-.scripture .notelink,.scripture .notelink:hover,.scripture .notelink:active,.scripture .notelink:visited {
+.scripture .notelink,
+.scripture .notelink:hover,
+.scripture .notelink:active,
+.scripture .notelink:visited {
   color: #8c8c8c;
 }
 .scripture .notelink sup {
@@ -112,11 +116,11 @@
   letter-spacing: -0.03em;
   vertical-align: 0.25em;
   line-height: 0;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-weight: bold;
 }
 .scripture .notelink + sup:before {
-  content: "\a0";
+  content: '\a0';
 }
 .scripture .f {
   display: block;
@@ -128,7 +132,7 @@
   font-style: italic;
   font-variant: small-caps;
 }
-.scripture [class^="fq"] {
+.scripture [class^='fq'] {
   font-style: italic;
 }
 .scripture .fl {
@@ -141,38 +145,44 @@
   letter-spacing: -0.03em;
   vertical-align: 0.25em;
   line-height: 0;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-weight: bold;
 }
 .scripture .fv:after {
-  content: "\a0";
+  content: '\a0';
 }
 .scripture .h {
   text-align: center;
   font-style: italic;
 }
-.scripture [class^="imt"] {
+.scripture [class^='imt'] {
   text-align: center;
   font-weight: bold;
 }
-.scripture .imt,.scripture .imt1,.scripture .imte,.scripture .imte1 {
+.scripture .imt,
+.scripture .imt1,
+.scripture .imte,
+.scripture .imte1 {
   font-size: 1.4em;
 }
-.scripture .imt2,.scripture .imte2 {
+.scripture .imt2,
+.scripture .imte2 {
   font-size: 1.3em;
 }
-.scripture .imt3,.scripture .imte3 {
+.scripture .imt3,
+.scripture .imte3 {
   font-size: 1.2em;
 }
-.scripture .imt4,.scripture .imte4 {
+.scripture .imt4,
+.scripture .imte4 {
   font-size: 1.1em;
 }
-.scripture [class^="is"] {
+.scripture [class^='is'] {
   font-size: 1.1em;
   text-align: center;
   font-weight: bold;
 }
-.scripture [class^="ip"] {
+.scripture [class^='ip'] {
   text-indent: 1em;
 }
 .scripture .ipi {
@@ -200,14 +210,14 @@
   text-align: right;
   text-indent: 0;
 }
-.scripture [class^="iq"] {
+.scripture [class^='iq'] {
   margin-left: 1em;
   margin-right: 1em;
 }
 .scripture .iq2 {
   text-indent: 1em;
 }
-.scripture [class^="ili"] {
+.scripture [class^='ili'] {
   padding-left: 1em;
   text-indent: -1em;
 }
@@ -224,7 +234,8 @@
   font-size: 1.1em;
   margin-top: 1.5em;
 }
-.scripture .io,.scripture .io1 {
+.scripture .io,
+.scripture .io1 {
   margin-left: 1em;
   margin-right: 0em;
 }
@@ -301,7 +312,7 @@
 .scripture .cls {
   text-align: right;
 }
-.scripture [class^="li"] {
+.scripture [class^='li'] {
   padding-left: 1em;
   text-indent: -1em;
   margin-left: 1em;
@@ -319,7 +330,7 @@
   margin-left: 4em;
   margin-right: 0em;
 }
-.scripture [class^="q"] {
+.scripture [class^='q'] {
   padding-left: 1em;
   text-indent: -1em;
   margin-left: 1em;
@@ -439,27 +450,28 @@ table {
 .scripture .tr {
   display: table-row;
 }
-.scripture [class^="th"] {
+.scripture [class^='th'] {
   font-style: italic;
   display: table-cell;
 }
-.scripture [class^="thr"] {
+.scripture [class^='thr'] {
   text-align: right;
   padding-right: 1.5em;
 }
-.scripture [class^="tc"] {
+.scripture [class^='tc'] {
   display: table-cell;
 }
-.scripture [class^="tcr"] {
+.scripture [class^='tcr'] {
   text-align: right;
   padding-right: 1.5em;
 }
-.scripture [class^="mt"] {
+.scripture [class^='mt'] {
   text-align: center;
   font-weight: bold;
   letter-spacing: normal;
 }
-.scripture .mt,.scripture .mt1 {
+.scripture .mt,
+.scripture .mt1 {
   font-size: 2.8em;
 }
 .scripture .mt2 {
@@ -467,13 +479,14 @@ table {
   font-style: italic;
   font-weight: normal;
 }
-.scripture [class^="ms"] {
+.scripture [class^='ms'] {
   text-align: center;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: normal;
 }
-.scripture .ms,.scripture .ms1 {
+.scripture .ms,
+.scripture .ms1 {
   font-size: 1.6em;
 }
 .scripture .ms2 {
@@ -489,7 +502,8 @@ table {
   font-weight: normal;
   font-style: italic;
 }
-.scripture .s,.scripture .s1 {
+.scripture .s,
+.scripture .s1 {
   text-align: center;
   font-weight: bold;
   font-size: 1.1em;
@@ -547,6 +561,9 @@ table {
   font-size: inherit;
   letter-spacing: normal;
 }
-.scripture [class^="p"] + .s,.scripture [class^="p"] + .s1,.scripture [class^="q"] + .s,.scripture [class^="q"] + .s1 {
+.scripture [class^='p'] + .s,
+.scripture [class^='p'] + .s1,
+.scripture [class^='q'] + .s,
+.scripture [class^='q'] + .s1 {
   margin-top: 1.5em;
 }

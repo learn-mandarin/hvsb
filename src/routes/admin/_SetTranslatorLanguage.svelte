@@ -23,8 +23,7 @@
       //@ts-ignore
       'roles.translator': e.target.value || null,
     });
-  }}
->
+  }}>
   <option value="">{translatorLanguage ? 'Remove' : 'Set'} Language</option>
   {#each languages as language}
     <option value={language}>{LanguageMappings[language]}</option>

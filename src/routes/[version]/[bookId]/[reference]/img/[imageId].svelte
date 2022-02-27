@@ -36,8 +36,7 @@
   data={image}
   title={image.title || truncatedDescription()}
   description={truncatedDescription()}
-  shareImage={`https://lh3.googleusercontent.com/${image.gcs}=w1200`}
->
+  shareImage={`https://lh3.googleusercontent.com/${image.gcs}=w1200`}>
   <ImageDisplay {image} />
 
   {#if image.title}
@@ -65,8 +64,7 @@
       class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
       border border-primary-700"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-        .reference}/img/{image.id}/edit"
-    >
+        .reference}/img/{image.id}/edit">
       Edit
       <i class="fas fa-key" />
     </a>

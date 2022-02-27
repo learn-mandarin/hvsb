@@ -103,15 +103,13 @@
       //@ts-ignore
       document = prepareDocument(e.detail.data);
     }
-  }}
-/>
+  }} />
 
 {#if document}
   <form on:submit|preventDefault={() => save(document)}>
     <div
       class="flex justify-between items-center pb-1 sticky top-0 z-10 bg-white
-    pt-2 -mt-2"
-    >
+    pt-2 -mt-2">
       <Button class="mr-auto" type="submit" color="green" form="filled">Save</Button>
 
       {#if $admin || (document && $user && document.createdBy === $user.uid)}
@@ -124,8 +122,7 @@
         color="black"
         form="simple"
         href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-          .reference}/doc/{document.id}"
-      >
+          .reference}/doc/{document.id}">
         <i class="fas fa-times mr-1" />
         Cancel
       </Button>
@@ -143,8 +140,7 @@
           autofocus
           bind:value={document.title}
           class="form-input block w-full text-lg sm:text-xl"
-          placeholder="Enter article title"
-        />
+          placeholder="Enter article title" />
       </div>
     </div>
 
@@ -156,8 +152,7 @@
         <select
           id="genre"
           bind:value={document.genre}
-          class="focus:ring-primary-500 focus:border-primary-500 shadow-sm border-gray-300 rounded-md block w-full"
-        >
+          class="focus:ring-primary-500 focus:border-primary-500 shadow-sm border-gray-300 rounded-md block w-full">
           {#each genres as genre}
             <option value={genre.key}>{genre.title}</option>
           {/each}
@@ -177,8 +172,7 @@
           type="number"
           bind:value={document.yearWritten}
           class="form-input w-full"
-          placeholder="Enter year"
-        />
+          placeholder="Enter year" />
       </div>
     </div>
 
@@ -196,8 +190,7 @@
                 document.authors = [...document.authors];
               }}
               class="cursor-pointer justify-center items-center flex
-            bg-gray-200 hover:bg-gray-300 rounded-full h-4 w-4 ml-1"
-            >
+            bg-gray-200 hover:bg-gray-300 rounded-full h-4 w-4 ml-1">
               <i class="fas fa-times text-xs" />
             </button>
             {#if docAuthor && isAddingAttributeToDB($authors, docAuthor)}
@@ -214,8 +207,7 @@
               bind:value={docAuthor}
               list="authors"
               class="form-input block w-full"
-              placeholder="Enter author"
-            />
+              placeholder="Enter author" />
             <datalist id="authors">
               {#each $authors as dbAuthor}
                 <option>{dbAuthor.name}</option>
@@ -230,8 +222,7 @@
     <button
       type="button"
       on:click={() => (document.authors = [...document.authors, ''])}
-      class="bg-gray-100 hover:bg-gray-200 rounded mt-1 px-2 py-1 text-xs"
-    >
+      class="bg-gray-100 hover:bg-gray-200 rounded mt-1 px-2 py-1 text-xs">
       Add Author
     </button>
 
@@ -254,8 +245,7 @@
           bind:value={document.location}
           list="locations"
           class="form-input block w-full"
-          placeholder="Enter location"
-        />
+          placeholder="Enter location" />
         <datalist id="locations">
           {#each $locations as location}
             <option>{location.name}</option>
@@ -275,8 +265,7 @@
           id="published"
           bind:checked={document.published}
           type="checkbox"
-          class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
-        />
+          class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded" />
         <label for="published" class="ml-2 block text-sm leading-5 text-gray-900">
           Published
         </label>
@@ -298,8 +287,7 @@
               form="simple"
               onclick={() => {
                 document.sections = moveInArray(document.sections, index, index - 1);
-              }}
-            >
+              }}>
               <i class="fas fa-chevron-up" />
             </Button>
           {/if}
@@ -308,8 +296,7 @@
               form="simple"
               onclick={() => {
                 document.sections = moveInArray(document.sections, index, index + 1);
-              }}
-            >
+              }}>
               <i class="fas fa-chevron-down" />
             </Button>
           {/if}
@@ -320,8 +307,7 @@
               onclick={() => {
                 document.sections.splice(index, 1);
                 document.sections = [...document.sections];
-              }}
-            >
+              }}>
               <i class="fas fa-trash" />
               Delete Paragraph
             </Button>
@@ -330,8 +316,7 @@
               target="_blank"
               form="simple"
               href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-                .reference}/img-edit/{section.imageId}"
-            >
+                .reference}/img-edit/{section.imageId}">
               Edit Image
             </Button>
             <Button
@@ -342,8 +327,7 @@
                   $page.params.reference,
                   section.imageId,
                   document.id
-                )}
-            >
+                )}>
               <i class="fas fa-unlink" />
               Unlink Image
             </Button>
@@ -356,8 +340,7 @@
       onclick={() => {
         document.sections.push({ contentType: 'text', text: '' });
         document.sections = [...document.sections];
-      }}
-    >
+      }}>
       Add Paragraph
     </Button>
     {#if $admin > 1}
@@ -368,8 +351,7 @@
           document.seriesIds = [e.target.value];
         }}
         class="form-input block w-full mt-2"
-        placeholder="Enter seriesId for index 0"
-      />
+        placeholder="Enter seriesId for index 0" />
     {/if}
   </form>
 

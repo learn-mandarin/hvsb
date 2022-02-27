@@ -54,8 +54,7 @@
 
   <select
     bind:value={documentId}
-    class="my-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1"
-  >
+    class="my-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1">
     {#each $chapterMedia as medium}
       {#if medium.type === 'document'}
         <option value={medium.id}>{medium.title}</option>

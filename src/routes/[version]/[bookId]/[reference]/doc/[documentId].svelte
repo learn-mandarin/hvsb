@@ -49,8 +49,7 @@
   data={document}
   title={document.title}
   description={''}
-  shareImage={`https://res.cloudinary.com/hvsb/image/upload/w_1200,h_630,c_fill/v1583535926/home/Jerash_Pano_8_v7myoz.jpg`}
->
+  shareImage={`https://res.cloudinary.com/hvsb/image/upload/w_1200,h_630,c_fill/v1583535926/home/Jerash_Pano_8_v7myoz.jpg`}>
   <div class="p-2">
     <h2 class="hidden md:block text-2xl font-semibold mb-1">
       {document.title}
@@ -100,8 +99,7 @@
       class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
       border border-primary-700"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-        .reference}/doc/{document.id}/translate"
-    >
+        .reference}/doc/{document.id}/translate">
       Translate to {LanguageMappings[translatorLanguage]}
       <i class="fas fa-key" />
     </a>
@@ -114,8 +112,7 @@
       class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
       border border-primary-700"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-        .reference}/doc/{document.id}/edit"
-    >
+        .reference}/doc/{document.id}/edit">
       Edit
       <i class="fas fa-key" />
     </a>

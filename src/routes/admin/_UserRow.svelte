@@ -34,8 +34,7 @@
       <small class="text-sm"
         >({new Date() <= user.subscriptions.basic.manualSubscriptionEndDate.toDate()
           ? 'active'
-          : 'expired'})</small
-      >
+          : 'expired'})</small>
     {:else}
       <span class="text-sm text-gray-500">Until...</span>
     {/if}
@@ -58,8 +57,7 @@
               unsubscribe: null,
             });
           }
-        }}>{printDate(user.unsubscribe.toDate())}</button
-      >
+        }}>{printDate(user.unsubscribe.toDate())}</button>
     {:else}
       <button
         type="button"
@@ -68,8 +66,7 @@
           await updateOnline(`users/${user.uid}`, {
             unsubscribe: new Date(),
           });
-        }}>Mark Unsubscribed</button
-      >
+        }}>Mark Unsubscribed</button>
     {/if}
   </td>
   <td>
@@ -83,7 +80,6 @@
       {user}
       on:close={() => {
         manuallySubscribe = false;
-      }}
-    />
+      }} />
   {/await}
 {/if}

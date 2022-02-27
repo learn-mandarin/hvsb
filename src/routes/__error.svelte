@@ -55,8 +55,7 @@
       <Contact
         on:close={() => {
           modal = null;
-        }}
-      />
+        }} />
     {/await}
   {/if}
 </div>

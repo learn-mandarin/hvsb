@@ -19,8 +19,7 @@
         <Button
           form="filled"
           color="black"
-          onclick={() => exportUsersAsCSV(filteredUsers, 'hvsb-users')}
-        >
+          onclick={() => exportUsersAsCSV(filteredUsers, 'hvsb-users')}>
           <i class="fas fa-download mr-1" />
           Download {filteredUsers.length} Users as CSV
         </Button>

@@ -48,8 +48,7 @@
     <Button
       class="mb-2"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}/{$page.params
-        .verse}/add-video"
-    >
+        .verse}/add-video">
       Add Video ID
     </Button>
     {#await import('./_ReceiveImage.svelte') then { default: ReceiveImage }}
@@ -60,8 +59,7 @@
     <Button
       class="mb-2"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}/{$page.params
-        .verse}/study"
-    >
+        .verse}/study">
       Study
     </Button>
   {/if}

@@ -15,8 +15,7 @@
   class:bg-orange-100={hovering}
   on:drop|preventDefault={dropped}
   on:dragover|preventDefault={() => (hovering = true)}
-  on:dragleave|preventDefault={() => (hovering = false)}
->
+  on:dragleave|preventDefault={() => (hovering = false)}>
   <slot />
   <input
     style="display: none;"
@@ -25,6 +24,5 @@
     on:change={(event) => {
       //@ts-ignore
       dispatch('addedfile', event.target.files);
-    }}
-  />
+    }} />
 </label>

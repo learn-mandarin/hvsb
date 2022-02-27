@@ -43,8 +43,7 @@
     type="text"
     on:blur={(e) => save(e, 'title_translations')}
     class="form-input block w-full mb-2"
-    placeholder="Translate Title"
-  />
+    placeholder="Translate Title" />
 
   <p><b>Description</b></p>
   <p>{document.description}</p>
@@ -53,8 +52,7 @@
     type="text"
     on:blur={(e) => save(e, 'description_translations')}
     class="form-input block w-full mb-2"
-    placeholder="Translate Description"
-  />
+    placeholder="Translate Description" />
 
   {#if $admin > 1}
     {#await import('$lib/components/utilities/JSON.svelte') then { default: JSON }}

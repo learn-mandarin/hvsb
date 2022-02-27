@@ -100,8 +100,7 @@
       class="{subpageOpen
         ? 'pb-96'
         : 'pb-32'} px-5 lg:px-20 pt-16 w-full md:w-1/2 md:overflow-y-auto
-        md:h-full md:pb-16"
-    >
+        md:h-full md:pb-16">
       <div class="scripture">
         {#if textErr}
           <p class="mb-3">
@@ -126,8 +125,7 @@
             border-solid border-gray-400 shadow-lg fixed print:hidden"
           style="left: 12px;"
           sveltekit:prefetch
-          href="/{version}/{previousUrl}"
-        >
+          href="/{version}/{previousUrl}">
           <i class="fas fa-chevron-left text-center" style="width: 1rem;" />
         </a>
       {/if}
@@ -138,8 +136,7 @@
             border-solid border-gray-400 shadow-lg fixed print:hidden"
           style="right: 12px;"
           sveltekit:prefetch
-          href="/{version}/{nextUrl}"
-        >
+          href="/{version}/{nextUrl}">
           <i class="fas fa-chevron-right text-center" style="width: 1rem;" />
         </a>
       {/if}
@@ -150,8 +147,7 @@
       class="md:px-1 lg:px-3 md:pt-16 md:pb-16 w-full md:w-1/2 overflow-y-auto
         md:h-full fixed md:relative md:z-auto z-30 bottom-0 md:bottom-auto
         max-h-full no-desktop-shadow bg-white"
-      style="box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.35);"
-    >
+      style="box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.35);">
       <div class="hidden md:block mt-1" />
       {#if mediaErr}
         {mediaErr}

@@ -7,8 +7,7 @@
 <header
   class="top-0 z-20 w-full flex items-center p-3 {!home
     ? 'fixed gradient-bg'
-    : 'absolute text-white'}"
->
+    : 'absolute text-white'}">
   <div class="{!home ? 'w-full' : 'container mx-auto'} flex items-center">
     <slot />
 
@@ -18,8 +17,7 @@
       href="/search"
       sveltekit:prefetch
       class="{!home ? 'text-gray-700 hover:bg-gray-200' : 'text-gray-200 hover:bg-white '}
-      py-2 px-3 rounded hover:text-black border border-transparent print:hidden"
-    >
+      py-2 px-3 rounded hover:text-black border border-transparent print:hidden">
       <i class="fas fa-search" />
       <span class="ml-1 hidden md:inline">Search</span>
     </a>
@@ -28,8 +26,7 @@
       type="button"
       class="{!home ? 'text-gray-700 hover:bg-gray-200' : 'text-gray-200 hover:bg-white '}
       py-2 px-3 rounded hover:text-black border border-transparent print:hidden"
-      on:click={() => (modal = 'contact')}
-    >
+      on:click={() => (modal = 'contact')}>
       <i class="fas fa-question-circle" />
       <span class="ml-1 hidden sm:inline">Contact Us</span>
     </button>
@@ -42,8 +39,7 @@
     <Contact
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 
@@ -52,8 +48,7 @@
     <Auth
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 
