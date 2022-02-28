@@ -15,13 +15,7 @@
   import ClassicCustomized from '$lib/components/editor/ClassicCustomized.svelte';
   import { getGenres, isAddingAttributeToDB } from '$lib/helpers/editing';
   import type { Readable } from 'svelte/store';
-  import {
-    addOnline,
-    collectionStore,
-    deleteDocumentOnline,
-    Doc,
-    updateOnline,
-  } from '$sveltefirets';
+  import { addOnline, collectionStore, deleteDocumentOnline, Doc, update } from '$sveltefirets';
   import { orderBy } from 'firebase/firestore';
 
   export let imageId: string;
@@ -43,7 +37,7 @@
 
   async function save(image: IImage) {
     try {
-      await updateOnline(`media/${image.id}`, image);
+      await update(`media/${image.id}`, image);
 
       if (image.credit) {
         for (const credit of image.credit) {
@@ -362,6 +356,13 @@
     {#if image.parents}
       Child of documents: {image.parents.join(', ')}
     {/if}
+
+    <div class="my-4 p-2 bg-gray-200 rounded">
+      <div class="text-xs font-semibold mb-2">Editor Notes (will not be published)</div>
+      <div class="prose max-w-none">
+        <ClassicCustomized bind:html={image.editorNotes} />
+      </div>
+    </div>
   </form>
 
   {#if $admin > 1}
