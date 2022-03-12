@@ -22,7 +22,7 @@
   import Header from '$lib/components/shell/Header.svelte';
   import ChapterTitle from '$lib/components/navigation/ChapterTitle.svelte';
   import View from '$lib/components/ui/View.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { bookName, admin } from '$lib/stores';
   import ParsedParagraph from '$lib/components/content/ParsedParagraph.svelte';
   export let version = 'WEB',
@@ -54,7 +54,7 @@
       {#if $admin}
         {#if editing}
           <Button class="ml-2" onclick={() => (editing = false)}>Cancel</Button>
-          <Button class="ml-2" form="primary" onclick={save}>Save</Button>
+          <Button class="ml-2" form="filled" onclick={save}>Save</Button>
         {:else}
           <Button class="ml-2" form="simple" onclick={() => (editing = true)}>Edit</Button>
         {/if}
@@ -66,8 +66,7 @@
       border-solid border-gray-400 shadow-lg fixed"
       style="right: 12px;"
       sveltekit:prefetch
-      href="/{version}/{bookId}/1"
-    >
+      href="/{version}/{bookId}/1">
       <i class="fas fa-chevron-right text-center" style="width: 1rem;" />
     </a>
 

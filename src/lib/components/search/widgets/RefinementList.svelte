@@ -56,8 +56,7 @@
 <div
   class="{items.length >= maxInitialItems || value
     ? ''
-    : 'hidden'} mt-1 mb-2 relative rounded-md shadow-sm"
->
+    : 'hidden'} mt-1 mb-2 relative rounded-md shadow-sm">
   <input
     type="search"
     placeholder="Search {label}"
@@ -65,8 +64,7 @@
     bind:value
     on:input={() => {
       searchForItems(value);
-    }}
-  />
+    }} />
 </div>
 
 <ul>
@@ -78,12 +76,10 @@
           type="checkbox"
           checked={item.isRefined}
           on:click={refine(item.value)}
-          class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
-        />
+          class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded" />
         <label
           for="{attribute.replace('.', '')}_{i}"
-          class="ml-2 block text-sm leading-5 text-gray-900"
-        >
+          class="ml-2 block text-sm leading-5 text-gray-900">
           {#if attribute === 'genre'}
             <i class="text-gray-500 {genreIcon(item.label)}" />
             {genreTitle(item.label)}
@@ -103,8 +99,7 @@
     class="p-1 mb-1 ml-1 text-xs text-gray-600"
     on:click={() => toggleShowMore()}
     ><i class="fas {isShowingMore ? 'fa-chevron-up' : 'fa-chevron-down'}" />
-    {isShowingMore ? 'Show less' : 'Show more'}</button
-  >
+    {isShowingMore ? 'Show less' : 'Show more'}</button>
 {/if}
 
 <div class="mb-3" />

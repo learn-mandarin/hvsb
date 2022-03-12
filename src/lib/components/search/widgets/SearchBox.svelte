@@ -33,8 +33,7 @@
   <div class="relative grow focus-within:z-10">
     <div
       class="absolute inset-y-0 left-0 pl-3 flex items-center
-        pointer-events-none"
-    >
+        pointer-events-none">
       <i class="fas {isSearchStalled ? 'fa-spinner fa-spin' : 'fa-search'} text-gray-500" />
     </div>
     <input
@@ -45,16 +44,14 @@
       class="appearance-none rounded-none block w-full pl-10 pr-3 py-2 border
         border-gray-300 rounded-l-md md:rounded-r-md text-gray-900 placeholder-gray-500
         focus:outline-none focus:ring-primary-300 focus:border-primary-300
-        sm:text-sm sm:leading-5 "
-    />
+        sm:text-sm sm:leading-5 " />
   </div>
   <button
     on:click={() => dispatch('showFilterMenu')}
     class="-ml-px relative flex items-center px-3 py-2 rounded-r-md border
       border-gray-300 text-sm leading-5 bg-gray-50 text-gray-900
       focus:outline-none focus:ring-primary-300 focus:border-primary-300
-       md:hidden"
-  >
+       md:hidden">
     <!-- <i class="fas fa-filter text-gray-400" /> -->
     <!-- <span class="ml-2 hidden sm:inline"> Filter </span> -->
     Filters

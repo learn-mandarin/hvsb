@@ -24,13 +24,15 @@ const config = {
       resolve: {
         alias: {
           $sveltefirets: path.resolve('./src/sveltefirets'),
-        }
+        },
       },
       server: {
         hmr: {
           clientPort: process.env.HMR_HOST ? 443 : 3000,
-          host: process.env.HMR_HOST ? process.env.HMR_HOST.substring("https://".length) : "localhost"
-        }
+          host: process.env.HMR_HOST
+            ? process.env.HMR_HOST.substring('https://'.length)
+            : 'localhost',
+        },
       },
       plugins: [md.plugin({ mode: 'html' })],
       optimizeDeps: {

@@ -27,8 +27,7 @@
   data={video}
   title={video.name}
   description={video.description}
-  shareImage={video.pictures.sizes[4].link_with_play_button.replace('?r=pad', '')}
->
+  shareImage={video.pictures.sizes[4].link_with_play_button.replace('?r=pad', '')}>
   <div style="padding-top: 56.25%" class="bg-black shadow overflow-hidden md:rounded-lg relative">
     <iframe
       class="absolute top-0 w-full left-0 h-full"
@@ -36,8 +35,7 @@
       src="https://player.vimeo.com/video/{video.id}"
       frameborder="0"
       allow="autoplay; fullscreen"
-      allowfullscreen
-    />
+      allowfullscreen />
     <!-- <img
         alt="Play Video"
         style="height: 100%; width: 100%; object-fit: cover;"
@@ -55,8 +53,7 @@
       class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
       border border-primary-700 my-2 mx-2 md:mx-0 btn inline-block"
       target="_blank"
-      href="https://vimeo.com/manage/{video.id}/general"
-    >
+      href="https://vimeo.com/manage/{video.id}/general">
       Edit in Vimeo
       <i class="fas fa-key" />
     </a>

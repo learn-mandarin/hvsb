@@ -43,8 +43,7 @@
   <div class="mt-1 relative rounded-md shadow-sm overflow-hidden">
     <div
       class="absolute inset-y-0 left-0 pl-3 flex items-center
-      pointer-events-none"
-    >
+      pointer-events-none">
       <span class="text-gray-500 sm:text-sm sm:leading-5">ID</span>
     </div>
     <input
@@ -52,16 +51,14 @@
       id="video"
       bind:value={videoId}
       class="form-input block w-full pl-7 pr-12 sm:text-sm sm:leading-5"
-      placeholder="Paste here from VIMEO"
-    />
+      placeholder="Paste here from VIMEO" />
     <div class="absolute inset-y-0 right-0 flex items-center">
       <button
         class="{(!videoId || saving) && 'opacity-50 cursor-not-allowed'} h-full
         py-0 px-3 border-transparent bg-black text-white text-sm leading-5
         font-semibold"
         disabled={!videoId || saving}
-        on:click={saveVideo}
-      >
+        on:click={saveVideo}>
         {saving ? 'SAVING' : 'SAVE'}
       </button>
     </div>
@@ -78,8 +75,7 @@
       height={h}
       frameborder="0"
       allow="autoplay; fullscreen"
-      allowfullscreen
-    />
+      allowfullscreen />
   </div>
 
   {#await fetchVideoData(videoId) then data}

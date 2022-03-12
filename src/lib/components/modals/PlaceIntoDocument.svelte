@@ -3,7 +3,7 @@
   import type { IImage, IImageParent, IDocumentSection } from '$lib/interfaces';
   export let image: Partial<Hit & IImage>;
   import Modal from '$lib/components/ui/Modal.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { chapterMedia } from '$lib/stores';
   import { page } from '$app/stores';
 
@@ -54,8 +54,7 @@
 
   <select
     bind:value={documentId}
-    class="my-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1"
-  >
+    class="my-2 rounded-md block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:ring-primary-300 focus:border-primary-300 sm:text-sm sm:leading-5 mr-1">
     {#each $chapterMedia as medium}
       {#if medium.type === 'document'}
         <option value={medium.id}>{medium.title}</option>
@@ -63,6 +62,6 @@
     {/each}
   </select>
 
-  <Button form="primary" onclick={assignParent}>Place</Button>
+  <Button form="filled" onclick={assignParent}>Place</Button>
   <Button form="simple" onclick={close}>Cancel</Button>
 </Modal>

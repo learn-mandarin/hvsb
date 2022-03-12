@@ -82,7 +82,7 @@ track information and to improve and analyze Our Service. The technologies We us
 Cookies or Browser Cookies. A cookie is a small file placed on Your Device. You can instruct Your browser
 to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies,
 You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting
-so that it will refuse Cookies, our Service may use Cookies. 
+so that it will refuse Cookies, our Service may use Cookies.
 
 Web Beacons. Certain sections of our Service and our emails may contain small electronic files known
 as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the

@@ -1,6 +1,6 @@
 <script lang="ts">
   import Modal from '$lib/components/ui/Modal.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { user, isSubscriber, subscriptionStatus, createBillingPortalSession } from '$lib/stores';
   let modal: 'contact' = null;
 
@@ -82,8 +82,7 @@
             type="radio"
             class="focus:ring-primary-500 text-primary-700"
             bind:group={period}
-            value="yearly"
-          />
+            value="yearly" />
           <span class="ml-2"> $50/year <small>(2 mo. free)</small> </span>
         </label>
         <label class="inline-flex items-center">
@@ -91,8 +90,7 @@
             type="radio"
             class="focus:ring-primary-500 text-primary-700"
             bind:group={period}
-            value="monthly"
-          />
+            value="monthly" />
           <span class="ml-2">$5/month</span>
         </label>
       </div>
@@ -109,9 +107,9 @@
 
     <div class="mt-5">
       {#if subscriptionStatus($user) !== 'canceled'}
-        <Button form="primary" onclick={startCheckout}>Checkout Using Stripe</Button>
+        <Button form="filled" onclick={startCheckout}>Checkout Using Stripe</Button>
       {:else}
-        <Button onclick={() => createBillingPortalSession(document.location.href)} form="primary">
+        <Button onclick={() => createBillingPortalSession(document.location.href)} form="filled">
           Resubscribe in Billing Portal
           <i class="fas fa-chevron-right" />
         </Button>
@@ -131,7 +129,6 @@
     <Contact.default
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}

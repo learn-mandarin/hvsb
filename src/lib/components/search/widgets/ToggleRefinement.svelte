@@ -36,12 +36,10 @@
       on:change={() => {
         refine({ isRefined: value.isRefined });
       }}
-      class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
-    />
+      class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded" />
     <label
       for={on ? attribute : 'not_' + attribute}
-      class="ml-2 block text-sm leading-5 text-gray-900"
-    >
+      class="ml-2 block text-sm leading-5 text-gray-900">
       {label}
       <span class="text-xs text-gray-600"> ({value.onFacetValue.count}) </span>
       <!-- value.offFacetValue.count -->

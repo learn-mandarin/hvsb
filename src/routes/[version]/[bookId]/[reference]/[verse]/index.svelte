@@ -7,7 +7,7 @@
 
 <script lang="ts">
   export let verse: string;
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { admin } from '$lib/stores';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
@@ -48,8 +48,7 @@
     <Button
       class="mb-2"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}/{$page.params
-        .verse}/add-video"
-    >
+        .verse}/add-video">
       Add Video ID
     </Button>
     {#await import('./_ReceiveImage.svelte') then { default: ReceiveImage }}
@@ -60,8 +59,7 @@
     <Button
       class="mb-2"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}/{$page.params
-        .verse}/study"
-    >
+        .verse}/study">
       Study
     </Button>
   {/if}

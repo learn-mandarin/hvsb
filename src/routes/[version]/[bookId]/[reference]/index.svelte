@@ -13,20 +13,17 @@
       {#if medium.type === 'document'}
         <PreviewDocument
           document={medium}
-          href={`/${$page.params.version}/${$page.params.bookId}/${$page.params.reference}/doc/${medium.id}`}
-        />
+          href={`/${$page.params.version}/${$page.params.bookId}/${$page.params.reference}/doc/${medium.id}`} />
       {/if}
       {#if medium.type === 'image'}
         <PreviewImage
           image={medium}
-          href={`/${$page.params.version}/${$page.params.bookId}/${$page.params.reference}/img/${medium.id}`}
-        />
+          href={`/${$page.params.version}/${$page.params.bookId}/${$page.params.reference}/img/${medium.id}`} />
       {/if}
       {#if medium.type === 'video'}
         <PreviewVideo
           video={medium}
-          href={`/${$page.params.version}/${$page.params.bookId}/${$page.params.reference}/vid/${medium.id}`}
-        />
+          href={`/${$page.params.version}/${$page.params.bookId}/${$page.params.reference}/vid/${medium.id}`} />
       {/if}
     {/each}
   {/if}

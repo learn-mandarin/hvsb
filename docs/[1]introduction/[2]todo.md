@@ -6,7 +6,8 @@
 - use inline SVG for icons
 - re-establish unpublished video list for admins using VITE_vimeoAuthenticatedAccessToken
 
-Debounce 
+Debounce
+
 ```
 export function debounce(func: Function, delay: number = 1000) {
     let timer: number

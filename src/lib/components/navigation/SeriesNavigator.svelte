@@ -19,8 +19,7 @@
     path={`series/${seriesId}`}
     startWith={seriesType}
     let:data
-    on:data={(e) => setCurrentIndex(e.detail.data.mediaIds)}
-  >
+    on:data={(e) => setCurrentIndex(e.detail.data.mediaIds)}>
     {#if data && currentIndex > -1}
       <div class="p-2 my-2 border-t border-gray-300">
         <p class="text-center mb-2">
@@ -33,14 +32,12 @@
             <Doc
               path={`media/${data.mediaIds[currentIndex - 1]}`}
               let:data={medium}
-              startWith={documentType}
-            >
+              startWith={documentType}>
               <a
                 href={`/${$page.params.version}/${medium.chapterIds[0].split('.')[0]}/${
                   medium.chapterIds[0].split('.')[1]
                 }/doc/${medium.id}`}
-                class="hover:underline text-gray-800 text-sm font-semibold whitespace-nowrap"
-              >
+                class="hover:underline text-gray-800 text-sm font-semibold whitespace-nowrap">
                 <i class="fas fa-arrow-left mr-1" />Prev
               </a>
             </Doc>
@@ -52,8 +49,7 @@
               //@ts-ignore
               goto(e.target.value);
             }}
-            class="block cursor-pointer pl-3 pr-9 py-1 border-transparent focus:outline-none ring-primary-500 hover:border-primary-100 focus:border-primary-500 hover:bg-transparent bg-gray-100 text-sm rounded-md w-full text-ellipsis"
-          >
+            class="block cursor-pointer pl-3 pr-9 py-1 border-transparent focus:outline-none ring-primary-500 hover:border-primary-100 focus:border-primary-500 hover:bg-transparent bg-gray-100 text-sm rounded-md w-full text-ellipsis">
             {#each data.mediaIds as mediaId}
               <Doc path={`media/${mediaId}`} let:data={medium} startWith={documentType}>
                 <option
@@ -61,8 +57,7 @@
                     medium.chapterIds[0].split('.')[1]
                   }/doc/${medium.id}`}
                   class:font-bold={mediaId === document.id}
-                  selected={mediaId === document.id}>{medium.title}</option
-                >
+                  selected={mediaId === document.id}>{medium.title}</option>
               </Doc>
             {/each}
             <option disabled>The rest of Passion Week will be posted soon... </option>
@@ -72,14 +67,12 @@
             <Doc
               path={`media/${data.mediaIds[currentIndex + 1]}`}
               let:data={medium}
-              startWith={documentType}
-            >
+              startWith={documentType}>
               <a
                 href={`/${$page.params.version}/${medium.chapterIds[0].split('.')[0]}/${
                   medium.chapterIds[0].split('.')[1]
                 }/doc/${medium.id}`}
-                class="hover:underline text-gray-800 text-sm font-semibold whitespace-nowrap"
-              >
+                class="hover:underline text-gray-800 text-sm font-semibold whitespace-nowrap">
                 Next<i class="fas fa-arrow-right ml-1" />
               </a>
             </Doc>

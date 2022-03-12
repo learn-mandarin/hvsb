@@ -16,19 +16,16 @@
   sveltekit:prefetch
   class="{!video.verseIds &&
     'ml-4 sm:ml-6'} hover:bg-gray-200 shadow overflow-hidden rounded-sm mb-2 flex
-  items-stretch text-left"
->
+  items-stretch text-left">
   {#if video.uri}
     <div class="media-block bg-gray-500 relative">
       <img
         alt="Play Video"
         style="height: 100%; width: 100%; object-fit: cover;"
-        src={video.pictures.sizes[1].link.replace('?r=pad', '')}
-      />
+        src={video.pictures.sizes[1].link.replace('?r=pad', '')} />
       <div
         class="absolute top-0 right-0 bottom-0 left-0 flex items-center
-        justify-center"
-      >
+        justify-center">
         <i class="fas fa-play fa-2x text-white" />
       </div>
     </div>
@@ -49,8 +46,7 @@
           <button
             on:click|preventDefault|once={() => deleteVideo(video.id)}
             class="cursor-pointer rounded leading-tight font-medium text-red-600
-            hover:text-red-800 ml-auto px-2 py-1 bg-red-100 mr-2"
-          >
+            hover:text-red-800 ml-auto px-2 py-1 bg-red-100 mr-2">
             <i class="fas fa-trash" />
             <i class="fas fa-key" />
           </button>
@@ -64,8 +60,7 @@
         <div style="background: lightgray; width: 75px; height: 75px;" />
         <div
           class="absolute top-0 right-0 bottom-0 left-0 flex items-center
-          justify-center"
-        >
+          justify-center">
           <i class="fas fa-play fa-2x text-white" />
         </div>
       </div>
@@ -78,8 +73,7 @@
           {#if video.currentVerses}
             <span
               class="px-2 py-1 leading-tight bg-gray-200 rounded text-sm
-            font-medium"
-            >
+            font-medium">
               {video.currentVerses.length > 1 ? 'vv' : 'v'}
               {#each video.currentVerses as verse, i}
                 {#if i === video.currentVerses.length - 1}
@@ -93,8 +87,7 @@
                 href={href ||
                   `WEB/${verseId.split('.')[0]}/${verseId.split('.')[1]}/vid/${video.id}`}
                 sveltekit:prefetch
-                class="ml-1 mt-1 px-2 py-1 leading-tight text-sm font-medium bg-gray-100 hover:bg-white rounded"
-              >
+                class="ml-1 mt-1 px-2 py-1 leading-tight text-sm font-medium bg-gray-100 hover:bg-white rounded">
                 {bookAbbrev(verseId.split('.')[0])}
                 {verseId.split('.')[1]}:{verseId.split('.')[2]}
               </a>
@@ -107,12 +100,10 @@
         <img
           alt="Play Video"
           style="height: 100%; width: 100%; object-fit: cover;"
-          src={data.pictures.sizes[1].link.replace('?r=pad', '')}
-        />
+          src={data.pictures.sizes[1].link.replace('?r=pad', '')} />
         <div
           class="absolute top-0 right-0 bottom-0 left-0 flex items-center
-          justify-center"
-        >
+          justify-center">
           <i class="fas fa-play fa-2x text-white" />
         </div>
       </div>
@@ -128,8 +119,7 @@
             <button
               on:click|preventDefault|once={() => deleteVideo(video.id)}
               class="cursor-pointer rounded leading-tight font-medium
-              text-red-600 hover:text-red-800 ml-auto px-2 py-1 bg-red-100 mr-2"
-            >
+              text-red-600 hover:text-red-800 ml-auto px-2 py-1 bg-red-100 mr-2">
               <i class="fas fa-trash" />
               <i class="fas fa-key" />
             </button>
@@ -138,8 +128,7 @@
             {#if video.currentVerses}
               <span
                 class="px-2 py-1 leading-tight bg-gray-200 rounded text-sm
-            font-medium"
-              >
+            font-medium">
                 {video.currentVerses.length > 1 ? 'vv' : 'v'}
                 {#each video.currentVerses as verse, i}
                   {#if i === video.currentVerses.length - 1}
@@ -153,8 +142,7 @@
                   href={href ||
                     `WEB/${verseId.split('.')[0]}/${verseId.split('.')[1]}/vid/${video.id}`}
                   sveltekit:prefetch
-                  class="ml-1 mt-1 px-2 py-1 leading-tight text-sm font-medium bg-gray-100 hover:bg-white rounded"
-                >
+                  class="ml-1 mt-1 px-2 py-1 leading-tight text-sm font-medium bg-gray-100 hover:bg-white rounded">
                   {bookAbbrev(verseId.split('.')[0])}
                   {verseId.split('.')[1]}:{verseId.split('.')[2]}
                 </a>
@@ -168,8 +156,7 @@
         Error on video {video.id}: {error}
         <button
           on:click={() => deleteVideo(video.id)}
-          class="cursor-pointer font-bold text-red-600 px-2"
-        >
+          class="cursor-pointer font-bold text-red-600 px-2">
           <i class="fas fa-trash" />
           <i class="fas fa-key" />
         </button>

@@ -6,8 +6,7 @@
   <div class="hidden md:flex justify-between items-center mb-1">
     <a
       class="font-medium px-3 py-2 hover:bg-gray-200 text-gray-700 rounded"
-      href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}"
-    >
+      href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}">
       <i class="fas fa-arrow-left" /> Back to List
     </a>
   </div>
@@ -16,8 +15,7 @@
     <a
       class="font-medium px-3 py-2 text-gray-700"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}"
-      sveltekit:noscroll
-    >
+      sveltekit:noscroll>
       <i class="fas fa-times" />
     </a>
   </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Header from '$lib/components/shell/Header.svelte';
   import View from '$lib/components/ui/View.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import { user, admin, subscriptionStatus, createBillingPortalSession } from '$lib/stores';
   let modal: 'contact' | 'subscribe' = null;
 
@@ -33,8 +33,7 @@
             <a
               href="/admin"
               class="cursor-pointer px-3 py-2 text-sm font-medium text-white
-              bg-gray-800 rounded-md hover:bg-gray-700"
-            >
+              bg-gray-800 rounded-md hover:bg-gray-700">
               Admin Panel
               <i class="fas fa-key" />
             </a>
@@ -61,8 +60,7 @@
             </div>
             <Button
               onclick={() => createBillingPortalSession(document.location.href)}
-              form="primary"
-            >
+              form="filled">
               Resubscribe in Billing Portal
               <i class="fas fa-chevron-right" />
             </Button>
@@ -107,7 +105,7 @@
             Subscription ended on
             {printDateWithWeekday($user.subscriptions.basic.current_period_end * 1000)}.
           </div>
-          <Button onclick={() => createBillingPortalSession(document.location.href)} form="primary">
+          <Button onclick={() => createBillingPortalSession(document.location.href)} form="filled">
             Resubscribe in Billing Portal
             <i class="fas fa-chevron-right" />
           </Button>
@@ -126,9 +124,9 @@
               {printDateWithWeekday($user.subscriptions.basic.manualSubscriptionEndDate.toDate())}.
             {/if}
           </div>
-          <Button form="primary" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
+          <Button form="filled" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
         {:else}
-          <Button form="primary" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
+          <Button form="filled" onclick={() => (modal = 'subscribe')}>Subscribe</Button>
         {/if}
       </div>
       <div class="mb-6 pb-6 border-b border-gray-300">
@@ -151,8 +149,7 @@
             id="newsletter"
             name="newsletter"
             type="checkbox"
-            class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
-          />
+            class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded" />
           <label for="newsletter" class="ml-2 block text-sm text-gray-900">
             Receive newsletter updates
           </label>
@@ -167,7 +164,7 @@
   {/if}
 
   {#if $admin > 1}
-    {#await import('$lib/components/utilities/JSON.svelte') then { default: JSON }}
+    {#await import('svelte-pieces/data/JSON.svelte') then { default: JSON }}
       <JSON obj={$user} />
     {/await}
   {/if}
@@ -178,8 +175,7 @@
     <Subscribe
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 
@@ -188,7 +184,6 @@
     <Contact
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}

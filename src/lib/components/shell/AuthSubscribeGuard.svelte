@@ -54,8 +54,7 @@
       context="force"
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}
 
@@ -64,7 +63,6 @@
     <Subscribe.default
       on:close={() => {
         modal = null;
-      }}
-    />
+      }} />
   {/await}
 {/if}

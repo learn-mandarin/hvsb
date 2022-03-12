@@ -81,19 +81,25 @@
   <div class="hidden md:flex justify-between items-center mb-1">
     <a
       class="font-medium px-3 py-2 hover:bg-gray-200 text-gray-700 rounded"
-      href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}"
-    >
+      href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}">
       <i class="fas fa-arrow-left" />
       Back to List
     </a>
+
+    {#if $admin > 1}
+      {#await import('svelte-pieces/data/JSON.svelte') then { default: JSON }}
+        <div class="ml-auto">
+          <JSON obj={data} />
+        </div>
+      {/await}
+    {/if}
 
     <button
       class="hover:bg-primary-500 text-primary-700 hover:text-white btn rounded
       px-4 py-2 font-bold hover:shadow text-sm focus:outline-none
       focus:border-primary-700 focus:ring-primary-500 uppercase leading-6"
       type="button"
-      on:click={share}
-    >
+      on:click={share}>
       <span class="hidden md:inline mr-1">Share</span>
       <i class="fas fa-share-alt" />
     </button>
@@ -105,35 +111,28 @@
       px-4 py-2 font-bold hover:shadow text-sm focus:outline-none
       focus:border-primary-700 focus:ring-primary-500 uppercase leading-6"
       type="button"
-      on:click={share}
-    >
+      on:click={share}>
       <i class="fas fa-share-alt" />
     </button>
     <a
       class="font-medium px-3 py-2 text-gray-700"
       href="/{$page.params.version}/{$page.params.bookId}/{$page.params.reference}"
-      sveltekit:noscroll
-    >
+      sveltekit:noscroll>
       <i class="fas fa-times" />
     </a>
   </div>
 
   <slot translator={$translator} />
 
-  {#if $translator}
-    <div class="p-2 flex flex-wrap">
-      <slot name="translator" />
+  {#if $admin || (data && $user && data.createdBy === $user.uid)}
+    <div class="p-2">
+      <slot name="admin" />
     </div>
   {/if}
 
-  {#if $admin || (data && $user && data.createdBy === $user.uid)}
+  {#if $translator}
     <div class="p-2 flex flex-wrap">
-      <slot name="admin" />
-      {#if $admin > 1}
-        {#await import('$lib/components/utilities/JSON.svelte') then { default: JSON }}
-          <JSON obj={data} />
-        {/await}
-      {/if}
+      <slot name="translator" />
     </div>
   {/if}
 </div>

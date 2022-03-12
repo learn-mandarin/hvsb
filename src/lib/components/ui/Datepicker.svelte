@@ -26,7 +26,7 @@
 
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
-  import Button from './Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
 
   async function setManualSubscriptionEndDate(user: IUser, endDate: Date) {
     await updateOnline(`users/${user.uid}`, {
@@ -58,12 +58,10 @@
       class="border border-gray-500"
       bind:this={dateInput}
       type="text"
-      placeholder="Click to select"
-    />
+      placeholder="Click to select" />
   </div>
   <div>
     <Button color="green" onclick={() => setManualSubscriptionEndDate(user, selectedDate)}
-      >Save</Button
-    >
+      >Save</Button>
   </div>
 </Modal>

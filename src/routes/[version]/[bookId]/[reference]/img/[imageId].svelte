@@ -36,8 +36,7 @@
   data={image}
   title={image.title || truncatedDescription()}
   description={truncatedDescription()}
-  shareImage={`https://lh3.googleusercontent.com/${image.gcs}=w1200`}
->
+  shareImage={`https://lh3.googleusercontent.com/${image.gcs}=w1200`}>
   <ImageDisplay {image} />
 
   {#if image.title}
@@ -60,15 +59,24 @@
   </div>
 
   <div class="mt-2" slot="admin">
-    <a
-      sveltekit:prefetch
-      class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
-      border border-primary-700"
-      href="/{$page.params.version}/{$page.params.bookId}/{$page.params
-        .reference}/img/{image.id}/edit"
-    >
-      Edit
-      <i class="fas fa-key" />
-    </a>
+    {#if image.editorNotes}
+      <div class="mb-4 p-2 bg-gray-200 rounded">
+        <div class="text-xs font-semibold">Editor Notes</div>
+        <ParsedParagraph value={image.editorNotes} />
+      </div>
+    {/if}
+
+    <div class="flex">
+      <a
+        sveltekit:prefetch
+        class="font-medium px-3 py-2 hover:bg-gray-200 text-primary-700 rounded
+        border border-primary-700"
+        href="/{$page.params.version}/{$page.params.bookId}/{$page.params
+          .reference}/img/{image.id}/edit">
+        Edit
+        <i class="fas fa-key" />
+      </a>
+      &nbsp;
+    </div>
   </div>
 </Medium>

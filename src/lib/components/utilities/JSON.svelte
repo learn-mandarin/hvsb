@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import Button from 'svelte-pieces/ui/Button.svelte';
   import ShowHide from '$lib/components/ui/ShowHide.svelte';
   export let obj: Record<string, any>,
     noHighlight = false;
@@ -44,8 +44,7 @@
   {#if show}
     <div class="fullscreen">
       <button type="button" class="px-3 py-2 bg-gray-100 text-gray-700" on:click={toggle}
-        >Hide</button
-      >
+        >Hide</button>
       <pre style="white-space:pre-wrap; font-size: 12px;">
       {@html json}
     </pre>
