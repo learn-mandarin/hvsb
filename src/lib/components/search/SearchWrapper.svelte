@@ -110,14 +110,14 @@
         {/if}
 
         <RefinementList {search} attribute="genre" label="Genres" />
-        <RefinementList {search} attribute="author" label="Authors" />
-        <RefinementList {search} attribute="credit" label="Image Credit" />
         <RefinementList {search} attribute="location" label="Locations" />
         <RefinementList {search} attribute="subject" label="Subjects" />
 
         {#if $admin}
           <hr class="mb-2" />
           <h4 class="text-xs font-semibold uppercase text-gray-700">Admin</h4>
+          <RefinementList {search} attribute="author" label="Authors" />
+          <RefinementList {search} attribute="credit" label="Image Credit" />
           <RefinementList {search} attribute="bookIds" label="Books" />
           <RefinementList {search} attribute="chapterIds" label="Chapters" />
           <RefinementList {search} attribute="createdBy" label="Created by" />
